@@ -1,0 +1,27 @@
+/* reset css */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#main {
+  padding: 20px 0px 0px 20px;
+}
+
+/* css for form input */
+input,
+textarea {
+  padding: 8px 20px;
+  margin: 12px 10px 12px 0px;
+}
+textarea {
+  width: 100%;
+}
+/* css for form submit */
+.form-submit button {
+  padding: 6px 10px;
+}
+.form-submit p {
+  display: inline-block;
+}

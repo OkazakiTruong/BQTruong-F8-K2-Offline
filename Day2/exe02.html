@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2 - Exercise 02</title>
+    <link rel="stylesheet" href="./assets/css/exe02.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="calculator center">
+        <table>
+          <tr>
+            <td colspan="4">
+              <input id="calculator-display" type="text" placeholder="0" disabled  />
+            </td>
+          </tr>
+          <tr>
+            <td><input class="calculator-keys" type="button" value="1" onclick="showDisplay(1)"/></td>
+            <td><input class="calculator-keys" type="button" value="2" onclick="showDisplay(2)"/></td>
+            <td><input class="calculator-keys" type="button" value="3" onclick="showDisplay(3)"/></td>
+            <td><input class="calculator-keys" type="button" value="+" onclick="showDisplay('+')"/></td>
+          </tr>
+          <tr>
+            <td><input class="calculator-keys" type="button" value="4" onclick="showDisplay(4)"/></td>
+            <td><input class="calculator-keys" type="button" value="5" onclick="showDisplay(5)"/></td>
+            <td><input class="calculator-keys" type="button" value="6" onclick="showDisplay(6)"/></td>
+            <td><input class="calculator-keys" type="button" value="-" onclick="showDisplay('-')"/></td>
+          </tr>
+          <tr>
+            <td><input class="calculator-keys" type="button" value="7" onclick="showDisplay(7)"/></td>
+            <td><input class="calculator-keys" type="button" value="8" onclick="showDisplay(8)"/></td>
+            <td><input class="calculator-keys" type="button" value="9" onclick="showDisplay(9)"/></td>
+            <td><input class="calculator-keys" type="button" value="x" onclick="showDisplay('x')"/></td>
+          </tr>
+          <tr>
+            <td><input class="calculator-keys" type="button" value="C" onclick="resetDisplay()"/></td>
+            <td><input class="calculator-keys" type="button" value="0" onclick="showDisplay(0)"/></td>
+            <td><input class="calculator-keys" type="button" value="=" onclick="showResult()"/></td>
+            <td><input class="calculator-keys" type="button" value="/" onclick="showDisplay('/')"/></td>
+          </tr>
+        </table>
+      </div>
+      <!-- end .calculator -->
+    </div>
+    <!-- end #main -->
+    <!-- js src -->
+    <script src="./assets/js/exe02.js"></script>
+  </body>
+</html>

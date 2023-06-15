@@ -1,0 +1,36 @@
+/* reset css */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: rgb(231, 231, 231);
+}
+
+#main {
+  padding: 20px 0px 0px 20px;
+}
+
+.padding-left-20 {
+  padding-left: 40px;
+}
+/* css for form input */
+input,
+select {
+  width: 280px;
+  padding: 10px;
+  box-sizing: content-box;
+  border: 3px solid rgb(190, 190, 190);
+  margin-bottom: 12px;
+  background-color: white;
+}
+
+td span {
+  color: #9c9c9c;
+}
+/* css for form submit */
+button {
+  padding: 16px 20px;
+  color: white;
+  background-color: rgb(7, 119, 143);
+  border: none;
+}

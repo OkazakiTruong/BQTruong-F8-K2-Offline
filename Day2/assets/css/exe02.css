@@ -1,0 +1,45 @@
+/* reset css */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* centering a object */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* css for table */
+table {
+  border-collapse: collapse;
+}
+table,
+td {
+  border: solid 3px rgb(134, 192, 167);
+}
+
+/* css for display and key */
+input {
+  width: 100%;
+  padding: 20px 40px;
+  border: none;
+  font-size: 20px;
+}
+
+/* css for display */
+#calculator-display {
+  text-align: right;
+}
+
+/* css for keys */
+.calculator-keys {
+  background-color: white;
+}
+.calculator-keys:hover {
+  background-color: #ccc;
+  color: white;
+  cursor: pointer;
+}
