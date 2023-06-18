@@ -20,43 +20,63 @@
       <div class="form-input">
         <table>
           <tr>
-            <td><b>First name</b></td>
-            <td class="padding-left-20"><b>Last name</b></td>
-          </tr>
-          <tr>
-            <td><input type="text" placeholder="John" /></td>
+            <td>
+              <label for="first-name"><b>First name</b></label>
+            </td>
             <td class="padding-left-20">
-              <input type="text" placeholder="Smith" />
+              <label for="last-name"><b>Last name</b></label>
             </td>
           </tr>
           <tr>
-            <td><b>Email address</b></td>
-            <td class="padding-left-20"><b>Address</b></td>
-          </tr>
-          <tr>
-            <td><input type="email" placeholder="john@example.com" /></td>
+            <td><input id="first-name" type="text" placeholder="John" /></td>
             <td class="padding-left-20">
-              <input type="text" placeholder="Silk St" />
+              <input id="last-name" type="text" placeholder="Smith" />
             </td>
           </tr>
           <tr>
-            <td><b>City</b></td>
+            <td>
+              <label for="email-address"><b>Email address</b></label>
+            </td>
             <td class="padding-left-20">
-              <b>State</b><span> (optional)</span>
+              <label for="address"><b>Address</b></label>
             </td>
           </tr>
           <tr>
-            <td><input type="text" placeholder="London" /></td>
-            <td class="padding-left-20"><input type="text" /></td>
-          </tr>
-          <tr>
-            <td><b>Zip code</b></td>
-            <td class="padding-left-20"><b>Country</b></td>
-          </tr>
-          <tr>
-            <td><input type="text" placeholder="EC2Y 8DS" /></td>
+            <td>
+              <input
+                id="email-address"
+                type="email"
+                placeholder="john@example.com"
+              />
+            </td>
             <td class="padding-left-20">
-              <select>
+              <input id="address" type="text" placeholder="Silk St" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="city"><b>City</b></label>
+            </td>
+            <td class="padding-left-20">
+              <label for="state"><b>State</b><span> (optional)</span></label>
+            </td>
+          </tr>
+          <tr>
+            <td><input id="city" type="text" placeholder="London" /></td>
+            <td class="padding-left-20"><input id="state" type="text" /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="zip-code"><b>Zip code</b></label>
+            </td>
+            <td class="padding-left-20">
+              <label for="country"><b>Country</b></label>
+            </td>
+          </tr>
+          <tr>
+            <td><input id="zip-code" type="text" placeholder="EC2Y 8DS" /></td>
+            <td class="padding-left-20">
+              <select id="country">
                 <option>United Kingdom</option>
                 <option>Vietnam</option>
                 <option>England</option>
