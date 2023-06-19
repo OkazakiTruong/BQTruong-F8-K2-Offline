@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 03 - Exercise 03</title>
+    <link rel="stylesheet" href="./assets/css/exe03.css" />
+  </head>
+  <body>
+    <header>
+      <!-- header -->
+    </header>
+
+    <main>
+      <section class="section-access-manager">
+        <form action="#" method="post">
+          <div class="form-input">
+            <div class="input-field">
+              <label for="username">Username:</label>
+              <input type="text" name="username" id="username" />
+            </div>
+            <div class="input-field">
+              <label for="password">Password:</label>
+              <input type="password" name="password" id="password" />
+            </div>
+            <div class="input-field">
+              <label for="city">City of Employment:</label>
+              <input type="text" name="city" id="city" />
+            </div>
+            <div class="input-field">
+              <label for="webserver">Web server:</label>
+              <select>
+                <option value="" hidden>- Choose a server -</option>
+                <option value="apache">Apache</option>
+                <option value="iis">IIS</option>
+                <option value="lighttpd">Lighttpd</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label>Please specify your role:</label>
+              <div class="flex-col">
+                <label>
+                  <input type="radio" name="role" value="admin" />
+                  Admin
+                </label>
+                <label>
+                  <input type="radio" name="role" value="engineer" />
+                  Engineer
+                </label>
+                <label>
+                  <input type="radio" name="role" value="manager" />
+                  Manager
+                </label>
+                <label>
+                  <input type="radio" name="role" value="guest" />
+                  Guest
+                </label>
+              </div>
+            </div>
+            <div class="input-field">
+              <label>Single Sign-on to the following:</label>
+              <div class="flex-col">
+                <label>
+                  <input type="checkbox" name="sign-on" value="mail" />
+                  Mail
+                </label>
+                <label>
+                  <input type="checkbox" name="sign-on" value="payroll" />
+                  Payroll
+                </label>
+                <label>
+                  <input type="checkbox" name="sign-on" value="self-service" />
+                  Self-service
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- end .form input -->
+          <div class="form-btn">
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+      <!-- end .section-access-manager-->
+    </main>
+
+    <footer>
+      <!-- footer -->
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+/* reset css */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.margin-20 {
+  margin: 20px;
+}
+/* css for main */
+main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* css for section feedback */
+.section-feedback {
+  width: 96%;
+  margin: 20px auto;
+}
+/* css for section heading */
+.section-heading {
+  text-align: center;
+  margin: 60px 0px;
+}
+.section-heading h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.section-heading hr {
+  display: block;
+  width: 60px;
+  margin: auto;
+  height: 3px;
+  border: 0px;
+  background-color: #5d9cfc;
+}
+/* css for section-content */
+
+.section-content .content-row,
+.section-content .feedback-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-content .content-row {
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+/* css for customer avatar */
+.customer-avatar img {
+  width: 50px;
+  border-radius: 50%;
+}
+/* css for customer feedback */
+.feedback-content {
+  margin-left: 20px;
+  color: #a4a4a4;
+}
+.feedback-content .feedback {
+  width: 260px;
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 14px;
+}

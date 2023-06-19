@@ -1,0 +1,48 @@
+/* reset css */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.margin-right-20 {
+  margin-right: 20px;
+}
+
+/* css for section cta */
+.section-cta {
+  text-align: center;
+  margin-top: 100px;
+}
+/* css for cta block */
+.section-cta .cta-block p {
+  line-height: 50px;
+  width: 190px;
+  margin: 0px auto;
+  font-size: 20px;
+  color: white;
+  background-color: #8498cb;
+}
+
+/* css for cta content */
+.cta-content {
+  margin: 30px 0px;
+}
+.cta-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+.cta-content h2 span {
+  color: #10a9f5;
+  font-weight: 600;
+}
+
+/* css for cta button */
+.cta-btn-list button {
+  padding: 12px 26px;
+  color: white;
+  background-color: #2c3032;
+  border-radius: 3px;
+}

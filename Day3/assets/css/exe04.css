@@ -1,0 +1,64 @@
+/* reset css */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  margin: 20px;
+}
+/* css for section address nav */
+.nav-list {
+  border: 1px solid #ae9452;
+  width: fit-content;
+  margin-bottom: 40px;
+}
+.nav-list .nav-item {
+  display: inline-block;
+  color: #ae9452;
+  padding: 5px 26px;
+}
+.nav-item.nav-item-active {
+  background-color: #ae9452;
+  color: #fff;
+}
+
+/* css for section map*/
+.section-map {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  flex-direction: row;
+  background-color: #ccc;
+}
+/* css for map left */
+.section-map .map-left {
+  width: 30%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.map-left .map-info {
+  margin: 50px 0px 0px 30px;
+}
+.map-left .map-info p {
+  margin-bottom: 26px;
+  color: #545b6a;
+}
+.map-info p.map-info-heading {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #545b6a;
+}
+.map-info p a {
+  color: #ae9452;
+}
+/* css for map-right */
+.section-map .map-right {
+  width: 70%;
+  height: 100%;
+}
+.map-right iframe {
+  width: 100%;
+  height: 100%;
+}
