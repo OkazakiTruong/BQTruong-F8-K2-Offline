@@ -1,0 +1,55 @@
+/* reset css */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* css for section subscribe */
+.section-subscribe {
+  margin: 30px 20px;
+  background-color: #334455;
+  padding: 30px 0px 20px 30px;
+  border-radius: 10px;
+}
+.section-subscribe h2 {
+  font-weight: 500;
+  color: #fff;
+  font-size: 28px;
+}
+.section-subscribe h2 span {
+  color: #ffa500;
+}
+
+.section-subscribe p {
+  color: #fff;
+  margin: 12px 0px;
+  line-height: 24px;
+}
+/* css for form subscribe */
+.form-subscribe input {
+  width: 280px;
+}
+.form-subscribe button {
+  width: 242px;
+  background-color: #f8db35;
+}
+.form-subscribe input,
+.form-subscribe button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+/* .section-subscribe hover */
+.section-subscribe:hover input::placeholder {
+  color: #ffa500;
+}
+.section-subscribe:hover input {
+  background-color: #ddd;
+}
+.section-subscribe:hover button {
+  background-color: #ffa500;
+  color: #fff;
+}

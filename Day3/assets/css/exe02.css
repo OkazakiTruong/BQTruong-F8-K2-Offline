@@ -11,6 +11,10 @@
 main {
   font-family: Arial, Helvetica, sans-serif;
 }
+/* css for section-content */
+.section-content {
+  max-width: 1167px;
+}
 /* css for section feedback */
 .section-feedback {
   width: 96%;

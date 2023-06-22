@@ -1,0 +1,154 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+/* hide input radio box*/
+.section-best-seller input[type="radio"] {
+  display: none;
+}
+/* css for section-best-seller */
+.section-best-seller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+/* css for heading and nav */
+.section-best-seller .section-heading {
+  font-size: 30px;
+}
+.section-nav {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px 0px 80px 0px;
+}
+.nav-list-items .nav-item {
+  background-color: #f5f5f5;
+  padding: 12px 16px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.nav-list-items .nav-item:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* css for product */
+
+.bs-products {
+  width: 924px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product {
+  max-width: 220px;
+  padding: 10px 30px 20px 30px;
+}
+/* css for product-img */
+.bs-products .product-img {
+  position: relative;
+}
+.bs-products .product-img img {
+  width: 160px;
+  height: 240px;
+}
+
+/* css for product button */
+.product-img .product-btn {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  bottom: -20px;
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s ease-in;
+}
+.product-img .product-btn button {
+  padding: 8px 12px;
+  background-color: #28388e;
+  border: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.product-img .product-btn button:nth-of-type(4) {
+  width: 100%;
+  margin-top: 10px;
+}
+.product-img .product-btn button:nth-of-type(2) {
+  margin: 0px 10px;
+}
+/* button hover */
+.product-img .product-btn button:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+/* product hover */
+.bs-products .product:hover .product-btn {
+  height: fit-content;
+  bottom: 0px;
+}
+.bs-products .product:hover {
+  box-shadow: 5px 10px 18px #888888;
+}
+/* css for product detail */
+.product-detail {
+  margin-top: 50px;
+  text-align: center;
+}
+.product-detail .product-price p {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* css for product rating */
+.product-detail .product-rating i {
+  color: #ccc;
+  font-size: 10px;
+}
+.product-detail .product-rating i:not(i:nth-of-type(5)) {
+  color: #f5c64c;
+}
+/* css for product name */
+.product-detail .product-name p {
+  margin: 10px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* css change color section nav */
+.best-seller:nth-of-type(1):checked ~ .section-nav .nav-item:nth-of-type(1),
+.best-seller:nth-of-type(2):checked ~ .section-nav .nav-item:nth-of-type(2),
+.best-seller:nth-of-type(3):checked ~ .section-nav .nav-item:nth-of-type(3),
+.best-seller:nth-of-type(4):checked ~ .section-nav .nav-item:nth-of-type(4),
+.best-seller:nth-of-type(5):checked ~ .section-nav .nav-item:nth-of-type(5) {
+  background-color: #28388e;
+  color: white;
+}
+
+/* css for change best seller product */
+/* show if checked */
+.best-seller:nth-of-type(1):checked ~ .section-content .bs-skincare,
+.best-seller:nth-of-type(2):checked ~ .section-content .bs-haircare,
+.best-seller:nth-of-type(3):checked ~ .section-content .bs-cosmetics-case,
+.best-seller:nth-of-type(4):checked ~ .section-content .bs-fragrance,
+.best-seller:nth-of-type(4):checked ~ .section-content .bs-fragrance {
+  display: flex;
+}
+/* hide if checked */
+.best-seller:nth-of-type(1):checked
+  ~ .section-content
+  .bs-products:not(.bs-skincare),
+.best-seller:nth-of-type(2):checked
+  ~ .section-content
+  .bs-products:not(.bs-haircare),
+.best-seller:nth-of-type(3):checked
+  ~ .section-content
+  .bs-products:not(.bs-cosmetics-case),
+.best-seller:nth-of-type(4):checked
+  ~ .section-content
+  .bs-products:not(.bs-fragrance),
+.best-seller:nth-of-type(5):checked
+  ~ .section-content
+  .bs-products:not(.bs-make-up) {
+  display: none;
+}

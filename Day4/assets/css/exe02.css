@@ -1,0 +1,74 @@
+@import url("https://fonts.cdnfonts.com/css/bebas-neue");
+@import url("https://fonts.cdnfonts.com/css/alfa-slab-one");
+/* reset css */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.mg-right-20 {
+  margin-right: 20px;
+}
+/* css for section-book-table */
+.section-book-table {
+  width: 80%;
+  height: 500px;
+  margin: 30px auto;
+  background-color: white;
+}
+/* css for section heading */
+.section-heading {
+  padding: 40px 0px;
+  text-align: center;
+  color: #3a2617;
+}
+.section-heading .small-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.section-heading .big-heading {
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 58px;
+}
+
+/* css for form  */
+.form-book-table form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form-book-table .field-left,
+.form-book-table .field-right {
+  display: flex;
+  flex-direction: column;
+}
+.form-book-table input,
+.form-book-table button {
+  width: 354px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+.form-book-table input {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  border: solid 2px #e7e7e7;
+  color: #3d3e3f;
+}
+.form-book-table input::placeholder {
+  color: #3d3e3f;
+}
+.form-book-table button {
+  font-family: "Alfa Slab One", sans-serif;
+  background-color: #af322a;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 32px;
+}
+.form-book-table button:hover {
+  cursor: pointer;
+}
