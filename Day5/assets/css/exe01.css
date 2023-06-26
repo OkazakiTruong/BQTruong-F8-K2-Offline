@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lobster&display=swap");
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* css for section-submit */
+.section-submit {
+  width: 700px;
+  margin: 40px auto;
+  font-family: "Lato", sans-serif;
+}
+/* css for section-heading and section-title */
+.section-submit .section-heading h2 {
+  font-family: "Lobster", cursive;
+  font-size: 3.5em;
+  font-weight: 300;
+}
+
+.section-submit .section-title {
+  font-size: 1.2em;
+  color: #c3c3c3;
+  margin: 36px 0px 30px 0px;
+}
+.section-submit .section-title p span {
+  color: #ec574c;
+}
+/* css for section-form*/
+/* css for field-group */
+.section-form .field-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  position: relative;
+}
+.section-form .field-group .input-noti {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: -60px;
+  left: 80px;
+  display: none;
+}
+.section-form .field-group .input-noti::after {
+  content: "";
+  position: absolute;
+  bottom: -18%;
+  left: 43px;
+  border: 8px solid;
+  border-color: black black transparent transparent;
+  transform: rotate(135deg);
+}
+.field-group .fa-star {
+  position: absolute;
+  right: 20px;
+  line-height: 60px;
+  font-size: 10px;
+  color: #dcdcdc;
+}
+.field-group .fa-xmark {
+  position: absolute;
+  right: 20px;
+  line-height: 60px;
+  font-size: 16px;
+  color: #81838f;
+  display: none;
+}
+.section-form .field-group label {
+  width: 60px;
+  line-height: 60px;
+  background-color: #dcdcdc;
+  text-align: center;
+  border: 2px solid #dcdcdc;
+  color: white;
+}
+.section-form .field-group select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.section-form .field-group select ~ .select-icon {
+  position: absolute;
+  right: 20px;
+  line-height: 60px;
+  font-size: 18px;
+  color: #dcdcdc;
+}
+
+.section-form .field-group input:not(input[type="checkbox"]),
+.section-form .field-group select,
+.section-form .field-group textarea {
+  width: calc(100% - 60px);
+  padding: 10px;
+  border: 2px solid transparent;
+  border-color: #dcdcdc #dcdcdc #dcdcdc transparent;
+  font-size: 18px;
+}
+.field-group select option[hidden],
+.section-form .field-group input:not(input[type="checkbox"])::placeholder,
+.section-form .field-group textarea::placeholder {
+  color: #c3c3c3;
+}
+/* when hover */
+.field-group:hover input:not(input[type="checkbox"]),
+.field-group:hover textarea,
+.field-group:hover select,
+.field-group:hover label {
+  border-color: black;
+}
+.field-group:hover label {
+  background-color: black;
+}
+
+/* when focus */
+.section-form .field-group input:not(input[type="checkbox"]):focus,
+.section-form .field-group select:focus,
+.section-form .field-group textarea:focus {
+  border-color: black;
+  outline: none;
+}
+.section-form .field-group input:not(input[type="checkbox"]):focus ~ label,
+.section-form .field-group select:focus ~ label,
+.section-form .field-group textarea:focus ~ label {
+  background-color: black;
+  border-color: black;
+}
+/* show noti */
+.section-form
+  .field-group
+  input:not(input[type="checkbox"]):focus
+  ~ .input-noti,
+.section-form .field-group select:focus ~ .input-noti,
+.section-form .field-group textarea:focus ~ .input-noti {
+  display: block;
+}
+/* hide star icon */
+.section-form .field-group input:not(input[type="checkbox"]):focus ~ .fa-star,
+.section-form .field-group select:focus ~ .fa-star,
+.section-form .field-group textarea:focus ~ .fa-star {
+  display: none;
+}
+/* show x icon */
+.section-form .field-group input:not(input[type="checkbox"]):focus ~ .fa-xmark,
+.section-form .field-group select:focus ~ .fa-xmark,
+.section-form .field-group textarea:focus ~ .fa-xmark {
+  display: block;
+}
+/* css for form-submit */
+.form-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* custom for checkbox */
+.form-submit .cb-message {
+  position: relative;
+  padding-left: 44px;
+  font-size: 18px;
+  color: #afafaf;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.form-submit .cb-message:hover {
+  cursor: pointer;
+}
+.form-submit .cb-message::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  border: 4px solid #afafaf;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+/* hide origin checkbox */
+.form-submit .cb-message input {
+  display: none;
+}
+/* checkmark */
+.cb-message .check-mark {
+  width: 12px;
+  height: 18px;
+  position: absolute;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  left: 11px;
+  bottom: 11px;
+  display: none;
+}
+.form-submit .cb-message input:checked ~ .check-mark {
+  display: block;
+}
+/* css for buttom */
+.form-submit button {
+  padding: 12px 50px;
+  background-color: #e93e32;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+.form-submit button:hover {
+  cursor: pointer;
+}

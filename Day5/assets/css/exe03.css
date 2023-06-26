@@ -1,0 +1,67 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.margin-left-right-30 {
+  margin: 0px 30px;
+}
+/* css for section-services */
+.section-service {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* css for section-heading */
+.section-heading {
+  margin: 40px 0px 100px 0px;
+  text-align: center;
+}
+.section-heading h2 {
+  font-size: 34px;
+  line-height: 50px;
+}
+/* css for section-content */
+.section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* css for content-item */
+.content-item {
+  width: 360px;
+  height: 440px;
+  text-align: center;
+  padding: 31px;
+  margin-bottom: 0px;
+  box-shadow: 0px 0px 10px #888888;
+}
+.content-item:hover {
+  transform: translateY(-10px);
+}
+.content-item .icon {
+  width: 140px;
+  height: 140px;
+  border: 1px solid #f2a93a;
+  border-radius: 50%;
+  font-size: 50px;
+  line-height: 140px;
+  color: #f2a93a;
+  margin: 0 auto;
+}
+.content-item h3 {
+  font-size: 36px;
+  margin: 40px 0px;
+}
+.content-item p {
+  margin-bottom: 30px;
+}
+.content-item button {
+  padding: 16px 36px;
+  background-color: #f2a93a;
+  color: white;
+  font-weight: 100;
+  border: none;
+}
+.content-item button:hover {
+  cursor: pointer;
+}
