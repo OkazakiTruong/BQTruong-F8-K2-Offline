@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+/* css for menu-dropdown */
+.menu-dropdown {
+  width: 1360px;
+  height: 64px;
+  margin: 20px auto 0px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+.menu-dropdown .menu-item {
+  list-style: none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #ccc;
+  padding: 0px 6px;
+  position: relative;
+}
+
+.menu-dropdown .menu-item > a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #666;
+  padding: 14px 18px;
+}
+.menu-dropdown .menu-item span {
+  padding: 0px 5px;
+}
+.menu-dropdown .menu-item .fa-angle-down {
+  font-size: 10px;
+}
+.menu-dropdown .menu-item:hover > a {
+  background-color: #2da5da;
+  color: white;
+}
+
+.menu-item.contact {
+  margin-left: auto;
+  border-right: none;
+  border-left: 1px solid #ccc;
+}
+/* css for submenu-dropdown */
+.submenu-dropdown {
+  position: absolute;
+  bottom: -266%;
+  left: 0;
+  width: 260px;
+  box-shadow: 0px 0px 10px #666;
+  background-color: white;
+  display: none;
+}
+.submenu-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 20px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.submenu-dropdown::after {
+  content: "";
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: -10px;
+  cursor: pointer;
+}
+.submenu-dropdown .submenu-item {
+  list-style: none;
+  padding: 6px;
+}
+.submenu-dropdown .submenu-item > a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  color: #666;
+  padding: 10px 14px;
+}
+.submenu-dropdown .submenu-item > a::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 5px;
+  height: 10px;
+  border: solid #666;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}
+.submenu-dropdown .submenu-item:not(.submenu-item:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+/* show submenu when hover */
+.menu-dropdown .menu-item:hover .submenu-dropdown {
+  display: block;
+}
+.submenu-dropdown .submenu-item:hover > a {
+  cursor: pointer;
+  background-color: #2da5da;
+  color: white;
+}
+.submenu-dropdown .submenu-item:hover > a::before {
+  border-color: white;
+}

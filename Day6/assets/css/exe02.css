@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.margin-left-right30 {
+  margin: 0px 30px;
+}
+body {
+  background-color: #ebf5fe;
+}
+/* css for service-list */
+.service-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 100px auto;
+}
+/* css for service-item */
+.service-item *,
+.service-item {
+  background-color: white;
+}
+.service-item {
+  width: 340px;
+  height: 220px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #ccc;
+  padding: 24px 14px 14px;
+  margin-bottom: 30px;
+}
+.service-item:hover {
+  border: 2px #e74d40 solid;
+}
+/* css for service-item heading */
+.service-item .heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.service-item .heading i {
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-right: 20px;
+}
+/* background for icon */
+.service-item .heading i.fa-brush {
+  background-color: #e45a7b; /* if background-image not work */
+  background-image: linear-gradient(to right, #e45a7b, #e3745e);
+  box-shadow: 0 0 26px -6px #e45a7b;
+}
+.service-item .heading i.fa-table {
+  background-color: #4ea4a4; /* if background-image not work */
+  background-image: linear-gradient(to right, #4ea4a4, #7bd8a0);
+  box-shadow: 0 0 26px -6px #4ea4a4;
+}
+.service-item .heading i.fa-bolt {
+  background-color: #e38a33; /* if background-image not work */
+  background-image: linear-gradient(to right, #e38a33, #f4c24b);
+  box-shadow: 0 0 26px -6px #e38a33;
+}
+.service-item .heading i.fa-rocket {
+  background-color: #306acd; /* if background-image not work */
+  background-image: linear-gradient(to right, #306acd, #6b8ef1);
+  box-shadow: 0 0 26px -6px #306acd;
+}
+.service-item .heading i.fa-layer-group {
+  background-color: #7123cb; /* if background-image not work */
+  background-image: linear-gradient(to right, #7123cb, #b458e8);
+  box-shadow: 0 0 26px -6px #7123cb;
+}
+.service-item .heading i.fa-envelope {
+  background-color: #6b8c2e; /* if background-image not work */
+  background-image: linear-gradient(to right, #6b8c2e, #91c354);
+  box-shadow: 0 0 26px -6px #6b8c2e;
+}
+/* css for service-item description */
+.service-item .desc p {
+  margin-bottom: 20px;
+  line-height: 24px;
+  color: #666666;
+}
+.service-item .desc a {
+  text-decoration: none;
+  color: #4074ed;
+  font-weight: 600;
+}

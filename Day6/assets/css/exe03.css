@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap");
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* set background-img for body */
+body {
+  background-image: url("../img/background/login-bg2.jpg");
+  background-attachment: fixed;
+  background-position-y: 100%;
+  background-size: cover;
+  font-family: "Nunito", sans-serif;
+}
+/* css for section-login */
+.section-form-login {
+  width: 780px;
+  height: 420px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 5px 0 23px -13px #666;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+/* css for section-left  */
+.section-left {
+  height: inherit;
+  width: 40%;
+  background-color: #ff574d;
+  border-radius: 10px 0px 0px 10px;
+  padding: 0px 12px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section-left .section-left-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fefefe;
+  margin-bottom: 30px;
+}
+.section-left-heading .logo {
+  width: 30px;
+  height: 30px;
+  background-color: #fefefe;
+  text-align: center;
+  line-height: 30px;
+  color: #ff574d;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.section-left-desc p {
+  color: #fefefe;
+  margin-bottom: 30px;
+}
+.section-left-desc button {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 3px;
+  color: #ff574d;
+  background-color: #fefefe;
+  box-shadow: 0px 0px 10px -2px #da5b4e;
+  margin-bottom: 30px;
+}
+.section-left-desc .list-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.section-left-desc .list-icons li {
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #da5b4e;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* css for section right */
+.section-right {
+  height: inherit;
+  width: 60%;
+  background-color: #fefefe;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #717171;
+}
+.section-right .section-right-heading {
+  margin-bottom: 40px;
+  position: relative;
+  color: #272323;
+}
+.section-right .section-right-heading::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #ff574d;
+  position: absolute;
+  left: 38%;
+  margin-top: 10px;
+}
+.section-right .section-right-heading span {
+  color: #ff574d;
+}
+
+.form-login .form-input input {
+  display: block;
+  width: 350px;
+  padding: 10px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0px 0px 4px #ccc;
+  margin-bottom: 20px;
+}
+/* custom check box */
+/* hide origin checkbox */
+.form-login .form-submit .custom-checkbox input {
+  display: none;
+}
+.form-login .form-submit .custom-checkbox {
+  position: relative;
+  padding-left: 26px;
+  -webkit-user-select: none;
+  font-size: 14px;
+}
+.form-login .form-submit .custom-checkbox::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-login .form-submit .custom-checkbox .check-mark {
+  width: 8px;
+  height: 12px;
+  border: solid #ff574d;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 5px;
+  display: none;
+}
+.form-login .form-submit .custom-checkbox input:checked ~ .check-mark {
+  display: block;
+}
+/* end css for custom-checkbox */
+.form-login .form-submit > a {
+  text-decoration: none;
+  float: right;
+  color: #717171;
+  font-size: 14px;
+}
+.form-login .form-submit button {
+  display: block;
+  width: 350px;
+  padding: 14px 10px;
+  background-color: #ec6355;
+  color: #fefefe;
+  border: none;
+  font-size: 14px;
+  border-radius: 3px;
+  margin: 20px 0px;
+}
+.form-login .form-submit p {
+  text-align: center;
+}
+.form-login .form-submit p a {
+  text-decoration: none;
+  color: #717171;
+}
+/* css for icon arrow */
+.icon-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #fefefe;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 37.5%;
+  top: 45%;
+  box-shadow: 0 0 14px -5px black;
+}
+.icon-arrow i {
+  line-height: 40px;
+  font-size: 16px;
+  color: #ff574d;
+}
