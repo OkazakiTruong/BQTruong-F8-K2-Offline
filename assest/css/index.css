@@ -97,7 +97,12 @@ h1::after {
 .fa-html5 {
   color: orange;
 }
-
+.fa-css3-alt {
+  color: #2e61ec;
+}
+.fa-square-js {
+  color: #efd81d;
+}
 .direction a {
   display: block;
   width: 100px;
