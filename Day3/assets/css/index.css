@@ -24,6 +24,7 @@ body {
 .section-list-exercises .section.heading {
   text-align: center;
   color: #967e76;
+  margin-bottom: 10px;
 }
 
 .list-exercises {

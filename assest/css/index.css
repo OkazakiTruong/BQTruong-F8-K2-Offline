@@ -1,0 +1,114 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #9babb8;
+}
+header {
+  display: flex;
+  justify-content: end;
+}
+.header-block {
+  margin-top: 20px;
+  width: 100px;
+  height: 60px;
+  background-color: #eee3cb;
+  border-radius: 30px 0px 0px 30px;
+  transition: 0.4s ease-in-out;
+}
+.header-block a {
+  display: block;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header-block a::after {
+  content: "View my git repo";
+  margin-left: 10px;
+  width: 0px;
+  overflow: hidden;
+  font-weight: 600;
+  color: #967e76;
+  transition: 0.4s ease;
+}
+.header-block a img {
+  height: 60px;
+  border-radius: 50%;
+}
+.header-block:hover,
+.header-block:hover a {
+  width: 200px;
+}
+.header-block:hover a::after {
+  width: 100px;
+}
+h1 {
+  margin: 20px 0px 40px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+h1::after {
+  content: "";
+  width: 200px;
+  height: 3px;
+  background-color: #eee3cb;
+  position: absolute;
+  bottom: -10px;
+  right: 44%;
+}
+
+.section-list-days {
+  display: flex;
+  max-width: 940px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.day-item {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #967e76;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px -5px #000000;
+}
+.heading h2,
+.heading p {
+  margin-bottom: 10px;
+  color: #967e76;
+}
+.decs p {
+  color: #967e76;
+}
+.decs i {
+  font-size: 20px;
+  margin: 10px 0px;
+}
+/* set color for icon */
+.fa-html5 {
+  color: orange;
+}
+
+.direction a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #967e76;
+  text-decoration: none;
+  border: 1px solid #967e76;
+}
+.direction a:hover {
+  background-color: #967e76;
+  color: white;
+}
