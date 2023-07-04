@@ -26,8 +26,19 @@ a {
   font-family: "Asap", sans-serif;
 }
 .section-estate-area h2 {
+  width: fit-content;
   font-size: 1rem;
   margin-bottom: 20px;
+  position: relative;
+}
+.section-estate-area h2::after {
+  content: "";
+  position: absolute;
+  left: 105%;
+  top: calc(50% - 2px);
+  width: 725px;
+  height: 2px;
+  background-color: #e5e5e5;
 }
 .section-estate-area nav {
   margin-bottom: 40px;
