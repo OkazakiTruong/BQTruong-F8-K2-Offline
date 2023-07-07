@@ -1,0 +1,47 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+.special-services {
+  width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+}
+.special-services .section-heading {
+  margin-bottom: 40px;
+}
+.special-services .row {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.special-services .item {
+  width: 350px;
+  height: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.special-services .item .img img {
+  height: 80px;
+  margin-bottom: 10px;
+}
+.special-services .item .item-content h3 {
+  margin-bottom: 10px;
+}
+.special-services .item p {
+  color: #ababab;
+  line-height: 20px;
+}
+
+.special-services .item .btn button {
+  padding: 10px 24px;
+  background-color: #28378d;
+  color: white;
+  border: none;
+}

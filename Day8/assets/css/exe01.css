@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap");
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* base css */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+/* css */
+header {
+  background-color: #f8f8fa;
+  height: 600px;
+}
+.header-nav {
+  width: 1400px;
+  margin: 0 auto;
+  font-family: "Manrope", sans-serif;
+  position: relative;
+}
+.header-nav .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav .main-nav .logo img {
+  width: 200px;
+  display: block;
+}
+.header-nav .nav > ul {
+  display: flex;
+  gap: 32px;
+}
+.header-nav .nav > ul > li > a {
+  padding: 20px 0px;
+}
+.header-nav .sub-nav a:hover,
+.header-nav .nav > ul > li:hover > a {
+  color: #ccc;
+}
+
+.header-nav .nav > ul li:nth-child(6):hover .sub-nav {
+  display: flex;
+}
+.header-nav .nav > ul > li:nth-child(-n + 6) > a::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.header-nav .sub-nav {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -400px;
+  box-shadow: 0px 0px 10px 2px #ccc;
+  display: none;
+}
+.header-nav .sub-nav::after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  cursor: pointer;
+}
+.header-nav .sub-nav .col-left {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.header-nav .sub-nav .col-left::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #f3f5f7;
+  position: absolute;
+  right: 0;
+}
+.sub-nav .col-left .row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  align-items: center;
+  line-height: 36px;
+}
+.header-nav .sub-nav .col-right {
+  width: 65%;
+  height: 100%;
+}
+
+.sub-nav .col-right {
+  display: flex;
+  align-items: flex-end;
+  gap: 180px;
+  line-height: 36px;
+  padding-left: 40px;
+}
+.sub-nav li span {
+  font-weight: bold;
+}
