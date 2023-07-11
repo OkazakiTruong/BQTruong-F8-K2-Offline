@@ -1,0 +1,136 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* base css */
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+/* css */
+/* css for .section-business */
+.section-business {
+  width: 1240px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* css for item  */
+.section-business .item {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #efeff2;
+  overflow: hidden;
+  transition: background-image 0.1s ease;
+  position: relative;
+}
+.section-business .item::before {
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 2px solid white;
+  transition-property: top, left, bottom, right;
+  transition: 0.4s ease;
+  z-index: 1;
+}
+.section-business .item::after {
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.1s ease;
+  z-index: 0;
+}
+/* css for item content */
+.section-business .item .content {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  overflow: hidden;
+}
+.section-business .item .content a {
+  display: block;
+}
+.section-business .item .content > * {
+  margin-bottom: 20px;
+  transition: 0.4s ease;
+}
+.section-business .item .content h2 {
+  transition: 0.3s ease;
+}
+.section-business .item .content p {
+  margin-bottom: 60px;
+}
+.section-business .item .content .icon {
+  font-size: 2.5rem;
+  width: fit-content;
+  color: #a26f5a;
+  transition: transform 0.4s ease;
+}
+.section-business .item .content a > i {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+/* hover */
+
+.section-business .item:hover {
+  cursor: pointer;
+}
+.section-business .item:hover:nth-child(1) {
+  background-image: url("../img/imgExe02/pic1.jpg");
+}
+.section-business .item:hover:nth-child(2) {
+  background-image: url("../img/imgExe02/pic2.jpg");
+}
+.section-business .item:hover:nth-child(3) {
+  background-image: url("../img/imgExe02/pic3.jpg");
+}
+.section-business .item:hover:nth-child(4) {
+  background-image: url("../img/imgExe02/pic4.jpg");
+}
+.section-business .item:hover:nth-child(5) {
+  background-image: url("../img/imgExe02/pic5.jpg");
+}
+.section-business .item:hover:nth-child(6) {
+  background-image: url("../img/imgExe02/pic6.jpg");
+}
+.section-business .item:hover::after {
+  background-color: #a26f5a;
+}
+.section-business .item:hover::before {
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+}
+.section-business .item:hover .content > *:not(.icon) {
+  color: white;
+  transform: translateY(-68px);
+}
+.section-business .item:hover .content .icon {
+  transform: scale(0);
+}
+.section-business .item:hover .content a:hover i {
+  background-color: white;
+  color: black;
+}

@@ -8,8 +8,14 @@ let procPrice = document.querySelectorAll(".number-price .price .proc-price")
 let priceTotal = document.getElementById("js-total-price");
 
 // count number product for header
-headingCounter.setAttribute("number-product", product.length);
-
+const countingProc = () =>{
+  let totalProc = 0;
+  for(let i = 0; i<numberProc.length;i++){
+    totalProc += Number(numberProc[i].value);
+  }
+  headingCounter.setAttribute("number-product", totalProc);
+}
+countingProc()
 // calculate total price
 const calculatePrice = () =>{
     let total = 0;
@@ -31,6 +37,7 @@ for (let i = 0; i < minusBtn.length; i++) {
       numberProc[i].value--;
       procTotal[i].innerHTML = numberProc[i].value;
       calculatePrice()
+      countingProc()
     }
   };
 }
@@ -40,6 +47,7 @@ for (let i = 0; i < plusBtn.length; i++) {
     numberProc[i].value++;
     procTotal[i].innerHTML = numberProc[i].value;
     calculatePrice()
+    countingProc()
   };
 }
 

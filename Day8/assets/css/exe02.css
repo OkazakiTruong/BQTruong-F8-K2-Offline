@@ -63,15 +63,16 @@ input[type="radio"]{
   display: block;
   width: 20px;
   height: 20px;
+  padding: 2px;
   background-color: #6371f3;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
   line-height: 20px;
   border-radius: 50%;
   position: absolute;
-  right: -20px;
-  top: -10px;
+  right: -22px;
+  top: -16px;
 }
 .shopping-cart .heading .close-icon i {
   color: white;
@@ -241,7 +242,7 @@ input[type="radio"]{
   padding: 40px 20px;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .shipping-promotion i{

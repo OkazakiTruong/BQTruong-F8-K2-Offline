@@ -1,0 +1,114 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+/* base css */
+/* css */
+body {
+  background-color: #fdfdfd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* css for section-contact-form */
+.section-contact-form {
+  width: 980px;
+  margin: 20px auto;
+}
+.section-contact-form .section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+.section-contact-form .section-heading h2 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+.section-contact-form .contact-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+.section-contact-form .contact-form .form-group {
+  position: relative;
+  font-size: 1rem;
+}
+.section-contact-form .contact-form .form-group input {
+  width: 480px;
+  padding: 22px 20px 14px 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.section-contact-form .contact-form .form-group select {
+  width: 480px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  color: grey;
+}
+.section-contact-form .contact-form .form-group textarea {
+  width: 980px;
+  padding: 30px 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.section-contact-form .contact-form .form-group label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  color: grey;
+}
+.section-contact-form .contact-form .form-group textarea ~ label {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  transform: translateY(-10%);
+  transition: 0.3s ease;
+  color: grey;
+}
+.contact-form .button {
+  width: 100%;
+  text-align: center;
+}
+.contact-form .button button {
+  background-color: #4c76d8;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 99px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.contact-form .button button:hover {
+  cursor: pointer;
+}
+/* active */
+.section-contact-form .contact-form .form-group input:focus,
+.section-contact-form .contact-form .form-group textarea:focus {
+  border: 1px solid #4c76d8;
+}
+.section-contact-form .contact-form .form-group input:focus ~ label {
+  top: 10%;
+  transform: translateY(-10%);
+  font-size: 0.8rem;
+}
+.section-contact-form .contact-form .form-group textarea:focus ~ label {
+  top: 5%;
+  transform: translateY(-5%);
+  font-size: 0.8rem;
+}
+.section-contact-form .contact-form .form-group input:valid ~ label {
+  top: 10%;
+  transform: translateY(-10%);
+  font-size: 0.8rem;
+}
+.section-contact-form .contact-form .form-group textarea:valid ~ label {
+  top: 5%;
+  transform: translateY(-5%);
+  font-size: 0.8rem;
+}
