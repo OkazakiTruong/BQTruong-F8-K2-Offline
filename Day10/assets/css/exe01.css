@@ -1,0 +1,138 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --primary-color: #31a8f7;
+  --background-menu-item: #f4f3f4;
+}
+/* base css */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: #31a8f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* css */
+.section-menu-container {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.section-menu-container input[type="radio"] {
+  display: none;
+}
+/* css for .section-menu */
+.section-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  background-color: white;
+  border-radius: 0 0 100% 0;
+  padding: 30px;
+  transition-property: width, height;
+  transition: 0.25s linear;
+  overflow: hidden;
+}
+.section-menu .icon {
+  height: fit-content;
+  width: fit-content;
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  position: relative;
+}
+.section-menu .menu {
+  margin-top: 10px;
+}
+.section-menu .icon label:nth-child(1) i {
+  position: relative;
+  z-index: 1;
+  transition: color 0.1s linear;
+}
+.section-menu .icon label:nth-child(2) i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  transition: color 0.1s linear;
+  z-index: 0;
+}
+.section-menu .menu ul li a {
+  display: block;
+  width: 200px;
+  padding: 5px 30px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.1s linear;
+}
+
+#open:checked ~ .section-menu {
+  width: 6000px;
+  height: 6000px;
+}
+#open:checked ~ .section-menu .menu ul li a {
+  color: var(--primary-color);
+}
+#open:checked ~ .section-menu .menu ul li a:focus {
+  color: black;
+  background-color: var(--background-menu-item);
+}
+#open:checked ~ .section-menu .icon label[for="open"] i {
+  z-index: 0;
+  animation: rotate 0.25s linear;
+  color: white;
+}
+#open:checked ~ .section-menu .icon label[for="close"] i {
+  z-index: 1;
+  color: var(--primary-color);
+  animation: rotate 0.25s linear;
+}
+#close:checked ~ .section-menu .icon label[for="open"] > i {
+  animation: rotate-reverse 0.25s linear;
+}
+#close:checked ~ .section-menu .icon label[for="close"] > i {
+  animation: rotate-reverse 0.25s linear;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes rotate-reverse {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: -180deg;
+  }
+}
+
+/* css for .content */
+.section-menu-container .content {
+  margin-right: 80px;
+  font-size: 2.8rem;
+  color: white;
+  text-align: right;
+  line-height: 90px;
+}
+.section-menu-container .content p span {
+  font-size: 1.8rem;
+}

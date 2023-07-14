@@ -1,0 +1,153 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --primary-color: #e46357;
+  --secondary-color: #cb4e43;
+  --third-color: #dd564b;
+  --fourth-color: #dd5e56;
+}
+body {
+  background-color: #323543;
+}
+
+.container {
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding-bottom: 20vh;
+}
+.wrapper {
+  width: 400px;
+  height: 480px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: 0.4s linear;
+}
+.container-envelope {
+  width: 400px;
+  height: 250px;
+  position: relative;
+}
+
+.back-envelope {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+.envelope {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 0.4s linear;
+  z-index: 1;
+}
+.border-skew {
+  width: 100%;
+  display: flex;
+  column-gap: 20px;
+  overflow: hidden;
+}
+.border-skew .skew-item {
+  width: 50px;
+  height: 20px;
+  background-color: var(--primary-color);
+  transform: skewX(-20deg);
+}
+.envelope .rectangle {
+  width: 160px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: var(--primary-color);
+}
+.envelope .rectangle:nth-child(3) {
+  width: 190px;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  float: right;
+  margin-top: 90px;
+  margin-right: 20px;
+  opacity: 50%;
+}
+.front-envelope .triangle:nth-child(1) {
+  position: absolute;
+  border: solid transparent;
+  border-width: 130px 200px;
+  border-color: var(--fourth-color) transparent transparent transparent;
+  transform-origin: top;
+  top: 0;
+  left: 0;
+  transition-property: transform, z-index, border-color;
+  transition: 0.4s linear;
+  z-index: 2;
+}
+.front-envelope .triangle:nth-child(2) {
+  position: absolute;
+  border: solid transparent;
+  border-width: 125px 200px;
+  border-color: transparent transparent var(--primary-color)
+    var(--primary-color);
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.front-envelope .triangle:nth-child(3) {
+  position: absolute;
+  border: solid transparent;
+  border-width: 125px 200px;
+  border-color: transparent transparent var(--third-color) var(--third-color);
+  transform: rotateY(180deg);
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.envelope-shadow {
+  width: 500px;
+  height: 50px;
+  background-color: black;
+  filter: blur(60px);
+  border-radius: 99px;
+  transform: rotateX(75deg);
+  margin-top: 130px;
+  transition: 0.4s linear;
+}
+
+/* hover */
+.wrapper:hover .front-envelope .triangle:nth-child(1) {
+  border-color: var(--secondary-color) transparent transparent transparent;
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.wrapper:not(:hover) .triangle:nth-child(1) {
+  transition-delay: 0.4s;
+}
+.wrapper:hover .envelope {
+  top: -80%;
+  transition-delay: 0.2s;
+}
+
+.wrapper:hover ~ .envelope-shadow {
+  width: 240px;
+  margin-top: 20px;
+}
