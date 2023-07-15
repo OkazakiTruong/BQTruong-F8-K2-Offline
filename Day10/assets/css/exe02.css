@@ -43,7 +43,6 @@ body {
   background-color: var(--primary-bg-color);
   color: white;
   cursor: pointer;
-  -webkit-user-select: none;
 }
 
 .container .content-wrapper {
