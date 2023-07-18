@@ -1,0 +1,33 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --primary-color: #f86061;
+  --primary-bg-color: #fef5f5;
+}
+/* base css */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* css for header */
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .header-nav {
+  position: absolute;
+  width: 100%;
+  bottom: -100px;
+  transform: translateX(1000%);
+}

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --primary-color: #f86061;
+  --primary-bg-color: #fef5f5;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* base css */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  color: var(--primary-color) !important;
+}
+/* css for header */
+header {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/* css for header-bars-icon */
+header .header-bars-icon i {
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* css for header-nav */
+header .header-nav {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  text-align: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: height 2s linear;
+}
+header:hover .header-nav {
+  height: max-content;
+}
+header .header-nav ul {
+  margin-bottom: 20px;
+}
+header .header-nav ul li {
+  padding: 10px 0px;
+}
+header .header-nav ul li a {
+  display: block;
+  padding: 10px 0px;
+  color: black;
+}
+header .header-nav ul li a:focus {
+  color: var(--primary-color);
+}
+/* css for input search */
+header .header-nav .header-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .header-nav .header-search form {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+}
+header .header-nav .header-search input {
+  padding: 14px 48px;
+  border-radius: 99px;
+  border-color: transparent;
+  box-shadow: 0px 0px 1px #ccc;
+}
+header .header-nav .header-search span {
+  position: absolute;
+  width: 46px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-nav .header-search span.search-icon {
+  left: 0;
+  bottom: 0;
+}
+header .header-nav .header-search span.cart-icon {
+  font-size: 1.2rem;
+  right: 0;
+  bottom: 0;
+}
+header .header-nav .header-search span.cart-icon::before {
+  content: "";
+  width: 1px;
+  height: 60%;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+}
+header .header-nav .header-search span.cart-icon::after {
+  content: "2";
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  top: -30%;
+  right: -40%;
+}
+/* end css for .header-nav */

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --primary-color: #f86061;
+  --primary-bg-color: #fef5f5;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* base css */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  color: var(--primary-color) !important;
+}
+/* css for header */
+header {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/* css for header-bars-icon */
+header .header-bars-icon i {
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* css for header-nav */
+header .header-nav {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  text-align: center;
+}
+/* header:hover .header-nav {
+  transform: scaleY(1);
+} */
+header .header-nav ul {
+  margin-bottom: 20px;
+}
+header .header-nav ul li {
+  padding: 10px 0px;
+}
+header .header-nav ul li a {
+  display: block;
+  padding: 10px 0px;
+  color: black;
+}
+header .header-nav ul li a:focus {
+  color: var(--primary-color);
+}
+/* css for input search */
+header .header-nav .header-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .header-nav .header-search form {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+}
+header .header-nav .header-search input {
+  padding: 14px 48px;
+  border-radius: 99px;
+  border-color: transparent;
+  box-shadow: 0px 0px 1px #ccc;
+}
+header .header-nav .header-search span {
+  position: absolute;
+  width: 46px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-nav .header-search span.search-icon {
+  left: 0;
+  bottom: 0;
+}
+header .header-nav .header-search span.cart-icon {
+  font-size: 1.2rem;
+  right: 0;
+  bottom: 0;
+}
+header .header-nav .header-search span.cart-icon::before {
+  content: "";
+  width: 1px;
+  height: 60%;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+}
+header .header-nav .header-search span.cart-icon::after {
+  content: "2";
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  top: -30%;
+  right: -40%;
+}
+/* end css for .header-nav */
+/* end css for header */
+/* css for main */
+main {
+  position: relative;
+  width: 100%;
+  transition: margin-top 0.4s linear;
+  padding-top: 40px;
+  background-color: white;
+  text-align: center;
+}
+/* css for section  groceries*/
+.section-groceries {
+  padding: 0px 12px;
+}
+.section-groceries .section-heading,
+.section-groceries .section-heading p,
+.section-groceries .section-desc {
+  margin-bottom: 30px;
+}
+.section-groceries .section-heading p span {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+  padding: 12px 16px;
+  border-radius: 99px;
+}
+.section-groceries .section-heading p span img {
+  vertical-align: middle;
+}
+.section-groceries .section-heading h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 50px;
+}
+.section-groceries .section-heading h1 span {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+.section-groceries .section-desc {
+  line-height: 30px;
+}
+.section-groceries .section-btn button:nth-child(1) {
+  padding: 12px 16px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+}

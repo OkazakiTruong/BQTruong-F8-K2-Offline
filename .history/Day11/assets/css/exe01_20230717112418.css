@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --primary-color: #f86061;
+  --primary-bg-color: #fef5f5;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* base css */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  color: var(--primary-color) !important;
+}
+/* css for header */
+header {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/* css for header-bars-icon */
+header .header-bars-icon i {
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* css for header-nav */
+header .header-nav {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  text-align: center;
+}
+header .header-nav ul {
+  margin-bottom: 20px;
+}
+header .header-nav ul li {
+  padding: 10px 0px;
+}
+header .header-nav ul li a {
+  display: block;
+  padding: 10px 0px;
+  color: black;
+}
+header .header-nav ul li a:focus {
+  color: var(--primary-color);
+}
+/* css for input search */
+header .header-nav .header-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .header-nav .header-search form {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+}
+header .header-nav .header-search input {
+  padding: 14px;
+}
+header .header-nav .header-search span {
+  background-color: green;
+  padding: 14px;
+}
