@@ -264,9 +264,7 @@ main section:nth-child(n + 2) {
 .section-services .services .service h3 {
   margin-bottom: 30px;
 }
-.section-services .services .service p {
-  color: var(--secondary-color);
-}
+
 .section-services .services .service:hover .service-bg {
   opacity: 1;
   rotate: -3deg;
@@ -507,15 +505,6 @@ footer .flex-box:nth-child(1) .row .content ul li:hover a {
   }
   .section-groceries .section-desc {
     font-size: 1.125rem;
-  }
-  .section-services h2 {
-    margin-bottom: 80px;
-  }
-  .section-services .services .service h3 {
-    font-size: 1.375rem;
-  }
-  .section-services .services .service p {
-    font-size: 1rem;
   }
   .section-groceries .section-btn button {
     font-size: 1.25rem;
