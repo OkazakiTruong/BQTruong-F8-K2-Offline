@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Titillium+Web:wght@900&display=swap");
+@import "mixins";
+$primary-color: #23d2e2;
+$font-rajdhani: "Rajdhani", sans-serif;
+$font-titillium: "Titillium Web", sans-serif;
+
+// reset css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: {
+    family: $font-rajdhani;
+    weight: 500;
+  }
+}
+.section {
+  &-login {
+    width: 100vw;
+    height: 100vh;
+    background: no-repeat url("../img/landing-background.jpg");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  &-decoration {
+    position: absolute;
+    background: url("../img/dot-texture.png") white;
+    border-radius: 50%;
+    width: 140vh;
+    height: 140vh;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(50%);
+    display: none;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+
+    .content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+      padding: 80px 10px;
+      margin: 0 auto;
+      .logo img {
+        width: 60px;
+      }
+      .heading {
+        color: white;
+      }
+      .heading h2 {
+        font-weight: 500;
+      }
+      .heading h1 {
+        font-family: $font-titillium;
+        font-size: 3.75rem;
+        font-weight: 900;
+        position: relative;
+        top: -30px;
+      }
+      .desc {
+        display: none;
+      }
+      .btn {
+        display: flex;
+        border: 1px solid white;
+        border-radius: 11px;
+      }
+      .btn button {
+        display: block;
+        width: 160px;
+        height: 50px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+      }
+      .btn button:nth-child(1) {
+        @include rounded(10px, 0px, 0px, 10px);
+      }
+      .btn button:nth-child(2) {
+        @include rounded(0px, 10px, 10px, 0px);
+      }
+      .btn-active {
+        background-color: white !important;
+        color: black !important;
+      }
+    }
+  }
+}

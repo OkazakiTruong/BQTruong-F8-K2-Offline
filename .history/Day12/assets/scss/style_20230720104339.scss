@@ -1,0 +1,12 @@
+// reset css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-login {
+  width: 100vw;
+  height: 100vh;
+  background: cover url("../img/landing-background.jpg");
+}

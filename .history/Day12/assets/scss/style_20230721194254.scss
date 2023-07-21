@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Titillium+Web:wght@900&display=swap");
+@import "mixins";
+$primary-color: #23d2e2;
+$secondary-color: #615dfa;
+$font-rajdhani: "Rajdhani", sans-serif;
+$font-titillium: "Titillium Web", sans-serif;
+
+// reset css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font: {
+    family: $font-rajdhani;
+    weight: 500;
+  }
+}
+.section {
+  &-login {
+    width: 100vw;
+    height: 100%;
+    background: no-repeat url("../img/landing-background.jpg");
+    background-size: cover;
+    position: relative;
+    // overflow: hidden;
+  }
+  &-decoration {
+    position: absolute;
+    background: url("../img/dot-texture.png") white;
+    border-radius: 50%;
+    width: 140vh;
+    height: 140vh;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(50%);
+    display: none;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 80px 0px;
+    .content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;
+      margin: 0 auto;
+      margin-bottom: 80px;
+      .logo img {
+        width: 60px;
+      }
+      .heading {
+        color: white;
+      }
+      .heading h2 {
+        font-weight: 500;
+      }
+      .heading h1 {
+        font-family: $font-titillium;
+        font-size: 3.75rem;
+        font-weight: 900;
+        position: relative;
+        top: -30px;
+      }
+      .desc {
+        display: none;
+      }
+      .btn {
+        display: flex;
+        width: 100%;
+        border: 1px solid white;
+        @include rounded(12px);
+      }
+      .btn button {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+      }
+      .btn button:nth-child(1) {
+        @include rounded(10px, 0px, 0px, 10px);
+      }
+      .btn button:nth-child(2) {
+        @include rounded(0px, 10px, 10px, 0px);
+      }
+      .btn-active {
+        background-color: white !important;
+        color: black !important;
+      }
+    }
+    .section-form {
+      width: 90vw;
+      max-width: 518px;
+      margin: 0 auto;
+      h2 {
+        margin-bottom: 60px;
+      }
+      .form {
+        width: 100%;
+
+        background-color: white;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include rounded(10px);
+      }
+      .form-field {
+        display: block;
+        position: relative;
+        margin: 10px 0px;
+        width: 100%;
+      }
+      .form-field input {
+        width: 100%;
+        padding: 16px 20px;
+        border: 1px solid #ccc;
+        @include rounded(10px);
+      }
+      .form-field span {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ccc;
+        background-color: #fff;
+        transition: 0.2s ease-in;
+        padding: 0px 4px;
+      }
+      .form-field input:focus {
+        outline: 1px solid $secondary-color;
+      }
+      .form-field input:focus ~ span {
+        top: 0;
+        font-size: 0.8rem;
+      }
+      .form-field input:valid ~ span {
+        top: 0;
+      }
+      .remember {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0px;
+        -webkit-user-select: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        align-items: center;
+      }
+      .remember label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px;
+      }
+      .remember input {
+        display: none;
+      }
+
+      .remember label:before {
+        content: "";
+        top: 0;
+        left: 0;
+        text-align: center;
+        line-height: 18px;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #ccc;
+        color: white;
+        @include rounded(5px);
+        transition: 0.2s ease-in;
+      }
+      .remember label:has(input:checked)::before {
+        content: "\f00d";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+      .remember a {
+        color: #ccc;
+      }
+      .form-btn {
+        width: 100%;
+      }
+      .form-btn button {
+        display: block;
+        width: 100%;
+        padding: 20px 0px;
+        border: none;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: white;
+        background-color: $secondary-color;
+        @include rounded(10px);
+      }
+      .social-account {
+        width: 100%;
+      }
+      .social-account h3 {
+        text-align: center;
+        margin: 30px 0px;
+        width: 100%;
+        font-size: 0.8rem;
+        position: relative;
+      }
+      .social-account h3::before {
+        content: "";
+        width: 20%;
+        height: 0;
+        border: solid #ccc;
+        border-width: 1px 0px 0px 0px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      .social-account h3::after {
+        content: "";
+        width: 20%;
+        height: 0;
+        border: solid #ccc;
+        border-width: 1px 0px 0px 0px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      .social-account .list-social-accounts {
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+      }
+
+      .social-account .list-social-accounts .item a i {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #3763d2;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        @include rounded(8px);
+      }
+      .social-account .list-social-accounts .item:nth-child(2) a i {
+        background-color: #1abcff;
+      }
+      .social-account .list-social-accounts .item:nth-child(3) a i {
+        background-color: #7b5dfa;
+      }
+    }
+  }
+}

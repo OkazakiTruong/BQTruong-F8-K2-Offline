@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Titillium+Web:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+}
+
+.section-login {
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat url("../img/landing-background.jpg");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.section-decoration {
+  position: absolute;
+  background: url("../img/dot-texture.png") white;
+  border-radius: 50%;
+  width: 140vh;
+  height: 140vh;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  transform: translateX(50%);
+  display: none;
+}
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+}
+.section-wrapper .content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 80px 10px;
+  margin: 0 auto;
+}
+.section-wrapper .content .logo img {
+  width: 60px;
+}
+.section-wrapper .content .heading {
+  color: white;
+}
+.section-wrapper .content .heading h2 {
+  font-weight: 500;
+}
+.section-wrapper .content .heading h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 900;
+  position: relative;
+  top: -30px;
+}
+.section-wrapper .content .desc {
+  display: none;
+}
+.section-wrapper .content .btn {
+  display: flex;
+  border: 1px solid white;
+  border-radius: 12px;
+}
+.section-wrapper .content .btn button {
+  display: block;
+  width: 160px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+.section-wrapper .content .btn button:nth-child(1) {
+  border-radius: 10px 0px 0px 10px;
+}
+.section-wrapper .content .btn button:nth-child(2) {
+  border-radius: 0px 10px 10px 0px;
+}
+
+/*# sourceMappingURL=style.css.map */
