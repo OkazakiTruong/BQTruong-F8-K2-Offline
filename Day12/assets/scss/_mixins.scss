@@ -1,0 +1,9 @@
+@mixin rounded($tl: 0, $tr: $tl, $br: $tl, $bl: $tl) {
+  border-radius: $tl $tr $br $bl;
+}
+
+@mixin responsive($screen) {
+  @media screen and (min-width: $screen) {
+    @content;
+  }
+}
