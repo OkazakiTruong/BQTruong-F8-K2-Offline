@@ -1,0 +1,20 @@
+@import "reset";
+@import "variables";
+@import "mixin";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Sofia Sans", sans-serif;
+}
+input,
+button,
+textarea,
+select {
+  font-family: "Sofia Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
