@@ -1,0 +1,4 @@
+@mixin responsive($width) {
+  @media screen and (max-width: $width) {
+  }
+}
