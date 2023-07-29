@@ -91,6 +91,10 @@
     .verify-and-social-media {
       flex-direction: column;
       row-gap: 20px;
+      .social-media {
+        width: 100%;
+        justify-content: space-evenly;
+      }
     }
   }
 }

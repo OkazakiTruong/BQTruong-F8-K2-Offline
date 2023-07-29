@@ -609,13 +609,6 @@
       margin: 0 auto;
     }
   }
-  @media screen and (max-width: 430px) {
-    .info-item {
-      min-width: 200px;
-      width: 80%;
-      margin: 0 auto;
-    }
-  }
 }
 //section-info
 @mixin section-info() {

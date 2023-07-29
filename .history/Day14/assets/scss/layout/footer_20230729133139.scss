@@ -87,10 +87,12 @@
 }
 @media screen and (max-width: 500px) {
   .footer {
-    padding-bottom: 20px;
     .verify-and-social-media {
       flex-direction: column;
       row-gap: 20px;
+      .social-media {
+        justify-content: space-between;
+      }
     }
   }
 }

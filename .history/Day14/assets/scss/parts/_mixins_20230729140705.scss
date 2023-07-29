@@ -540,7 +540,6 @@
     background-color: white;
     @include rounded(0, 0, 8px, 8px);
     .info-img {
-      max-width: 100%;
       font-size: 0;
       height: fit-content;
       img {
@@ -560,60 +559,6 @@
       .content {
         font-size: 1.6rem;
       }
-    }
-  }
-  @media screen and (max-width: 1200px) {
-    .info-item {
-      min-width: 200px;
-      width: 80%;
-      margin: 0 auto;
-    }
-    .info-content {
-      padding-bottom: 20px !important;
-      .content-heading {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 27px;
-        color: $orange-700;
-        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-        margin-bottom: 6px;
-      }
-      .content {
-        font-size: 1.6rem;
-      }
-    }
-  }
-  @media screen and (max-width: 992px) {
-    .info-item {
-      min-width: 200px;
-      height: 359px;
-      width: 80%;
-      margin: 0 auto;
-
-      .content {
-        font-size: 1.4rem;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .info-item {
-      min-width: 200px;
-      width: 50%;
-      margin: 0 auto;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .info-item {
-      min-width: 200px;
-      width: 60%;
-      margin: 0 auto;
-    }
-  }
-  @media screen and (max-width: 430px) {
-    .info-item {
-      min-width: 200px;
-      width: 80%;
-      margin: 0 auto;
     }
   }
 }
@@ -650,35 +595,10 @@
     }
     @include section-mb(253px);
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1088px) {
     .section-info {
       .section-content {
         position: relative;
-      }
-      .row {
-        justify-content: center;
-        column-gap: 0px;
-        row-gap: 25px;
-        > *[class^="col-"] {
-          flex-basis: var(--column-width);
-          max-width: var(--column-width);
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 992px) {
-    .section-info {
-      .section-content {
-        position: relative;
-      }
-      .row {
-        justify-content: center;
-        column-gap: 0px;
-        row-gap: 25px;
-        > *[class^="col-"] {
-          flex-basis: var(--column-width);
-          max-width: var(--column-width);
-        }
       }
     }
     .section-decor {
@@ -688,7 +608,6 @@
       height: 104% !important;
       top: 0;
       left: 0;
-      transform: translateY(-2%);
     }
   }
 }
@@ -765,6 +684,19 @@
       color: $grey-500;
     }
   }
+  @media screen and (max-width: 992px) {
+    .form-contact {
+      .row {
+        row-gap: 20px;
+      }
+      .form-heading {
+        text-align: center;
+      }
+      .input-group {
+        padding: 0 30px;
+      }
+    }
+  }
 }
 //section-form-contact
 @mixin section-form-contact() {
@@ -774,27 +706,5 @@
     }
     @include form-contact();
     @include section-mb(101px);
-  }
-  @media screen and (max-width: 992px) {
-    .section-form-contact {
-      .row {
-        row-gap: 20px;
-      }
-    }
-    .form-contact-left {
-      display: flex;
-      justify-content: center;
-      img {
-        width: 50%;
-      }
-    }
-    .form-contact {
-      .form-heading {
-        text-align: center;
-      }
-      .input-group {
-        padding: 0 30px;
-      }
-    }
   }
 }
