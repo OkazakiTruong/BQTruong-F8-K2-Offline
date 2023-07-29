@@ -1,0 +1,46 @@
+:root {
+  --container-width: $1200;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.row [class^="col-"] {
+  --column-number: calc(12 / var(--column-size));
+  --column-width: calc(100% / var(--column-number));
+  flex-basis: var(--column-width);
+  max-width: var(--column-width);
+}
+
+@mixin column($name: "") {
+  $prefix: ".col-";
+  @for $i from 1 through 12 {
+    $selector: $prefix + $i;
+    @if ($name != "") {
+      $selector: $prefix + $name + "-" + $i;
+    }
+    #{$selector} {
+      --column-size: #{$i};
+    }
+  }
+}
+
+@include column();
+$breakpoints: (
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400,
+);
+@each $name, $breakpoint in $breakpoints {
+  @media screen and (max-width: $breakpoint) {
+    @include column($name);
+  }
+}

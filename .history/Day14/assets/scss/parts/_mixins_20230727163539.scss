@@ -1,0 +1,110 @@
+// normal mixins
+@mixin square($one-side-square) {
+  width: $one-side-square;
+  height: $one-side-square;
+}
+@mixin rounded($tl: 0px, $tr: $tl, $br: $tl, $bl: $tl) {
+  border-radius: $tl $tr $br $bl;
+}
+// mixins for this project
+// css for section-heading
+@mixin section-heading($heading-mb: 0px, $h2-mb: 0px) {
+  .section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: $heading-mb;
+  }
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 131%;
+    margin-bottom: $h2-mb;
+  }
+  p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 127%;
+  }
+}
+//khoảng cách giữa các section
+@mixin section-mb($value: 0px) {
+  margin-bottom: $value;
+}
+// quality-item
+@mixin section-quality-item() {
+  .quality-item {
+    position: relative;
+    z-index: 1;
+    width: 295px;
+    height: 337px;
+    background-color: $white;
+    padding: 33px;
+    box-shadow: -5.8333330154418945px 8.333333015441895px 72.5px 0px
+      rgba(54, 54, 54, 0.12);
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+    @include rounded(3px);
+    &.bigger {
+      padding-top: 60px;
+      padding-bottom: 80px;
+      width: 343px;
+      height: 393px;
+    }
+    .icon {
+      @include square(83px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include rounded(10px);
+
+      img {
+        width: 45px;
+      }
+      &.bg-orange-100 {
+        background-color: $orange-100;
+      }
+      &.bg-green-100 {
+        background-color: $green-100;
+      }
+    }
+    h3 {
+      font-size: 4.3rem;
+      font-weight: 800;
+    }
+    p {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+}
+//product-item
+@mixin section-product-item() {
+  .product-item {
+    text-align: center;
+    .product-img {
+      img {
+        width: 240px;
+        height: 240px;
+      }
+      margin-bottom: 17px;
+    }
+    .product-name {
+      font-size: 2.8rem;
+      padding-bottom: 13px;
+      position: relative;
+      &::after {
+        content: "haloo";
+        height: 1px;
+        width: 43px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $grey-500;
+      }
+    }
+  }
+}

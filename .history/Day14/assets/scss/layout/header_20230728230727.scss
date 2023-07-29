@@ -1,0 +1,129 @@
+.header {
+  width: 100%;
+  box-shadow: 0px 1.6666666269302368px 8.333333015441895px 0px
+    rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  font-family: $inter-font;
+}
+.header-logo {
+  margin: 16px;
+}
+.header-right {
+  height: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  .logo {
+    display: none;
+  }
+}
+.header-right-wrapper {
+  width: 100%;
+  display: flex;
+  column-gap: 50px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 50%;
+  .menu {
+    height: 100%;
+    ul {
+      display: flex;
+      column-gap: 50px;
+      font-size: 1.7rem;
+      font-weight: 600;
+      height: 100%;
+      li {
+        height: 100%;
+      }
+      a {
+        position: relative;
+        display: block;
+        height: 100%;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: $green-800;
+          bottom: 0;
+          left: 0;
+          transition: 0.3s linear;
+        }
+        &:hover {
+          color: $green-800;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+      .active {
+        color: $green-800;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $green-800;
+          bottom: 0;
+          left: 0;
+          transition: 0.3s linear;
+        }
+      }
+    }
+  }
+  .cart-icon {
+    position: relative;
+    span {
+      width: 13px;
+      height: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: $white;
+      background-color: $orange-700;
+      position: absolute;
+      font-size: 1rem;
+      font-weight: 500px;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 0px 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    position: relative;
+    padding: 0;
+  }
+  .header-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 50vw;
+    height: 800px;
+    background-color: $grey-100;
+    .logo {
+      display: block;
+    }
+    .header-right-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 50vh;
+      // height: 100%;
+      // row-gap: 20px;
+    }
+    .menu ul {
+      flex-direction: column;
+    }
+  }
+}

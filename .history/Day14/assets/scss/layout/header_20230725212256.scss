@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu {
+    margin-right: auto;
+    ul {
+      display: flex;
+    }
+  }
+}

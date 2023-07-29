@@ -1,0 +1,67 @@
+// normal mixins
+@mixin square($one-side-square) {
+  width: $one-side-square;
+  height: $one-side-square;
+}
+@mixin rounded($tl: 0px, $tr: $tl, $br: $tl, $bl: $tl) {
+  border-radius: $tl $tr $br $bl;
+}
+// mixins for this project
+// css for section-heading
+@mixin section-heading() {
+  .section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  h2 {
+    font-size: 3.1rem;
+    font-weight: 800;
+    line-height: 131%;
+    margin-bottom: 24px;
+  }
+  p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 127%;
+  }
+}
+//khoảng cách giữa các section
+@mixin section-gap() {
+  section {
+    margin-bottom: 101px;
+  }
+}
+
+@mixin section-quality-item() {
+  .quality-item {
+    width: 295px;
+    height: 337px;
+    padding: 33px 0 0 33px;
+    box-shadow: -5.8333330154418945px 8.333333015441895px 72.5px 0px
+      rgba(54, 54, 54, 0.12);
+    .icon {
+      @include square(83px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+      @include rounded(10px);
+      img {
+        width: 45px;
+      }
+      &.bg-orage-100 {
+        background-color: $orange-100;
+      }
+    }
+    h3 {
+      font-size: 4.3rem;
+      font-weight: 800;
+    }
+    p {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+}

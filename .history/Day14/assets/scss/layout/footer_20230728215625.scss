@@ -1,0 +1,38 @@
+.footer {
+  width: 100vw;
+  min-height: 407px;
+  background-color: $green-100;
+  padding-top: 67px;
+  font-size: 1.6rem;
+  .row {
+    justify-content: center;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    p:has(img) {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+  }
+
+  .logo {
+    img {
+      margin-bottom: 18px;
+    }
+  }
+  .active {
+    margin-bottom: 6px;
+    font-size: 16.667px;
+    font-weight: 600;
+    line-height: 21.667px;
+    color: $green-800;
+  }
+}

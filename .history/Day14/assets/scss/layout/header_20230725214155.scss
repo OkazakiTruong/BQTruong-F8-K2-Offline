@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  .header-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 50px;
+  }
+  .menu {
+    ul {
+      display: flex;
+      column-gap: 50px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      a {
+        padding: 34px 0px;
+        &::after {
+          width: 100%;
+        }
+        &:hover {
+          color: $green-800;
+        }
+      }
+      .active {
+        color: $green-800;
+      }
+    }
+  }
+}

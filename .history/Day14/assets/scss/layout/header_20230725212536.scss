@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu {
+    ul {
+      display: flex;
+    }
+  }
+}

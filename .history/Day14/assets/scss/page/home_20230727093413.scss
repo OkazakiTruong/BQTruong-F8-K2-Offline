@@ -1,0 +1,60 @@
+@import "../parts/variables";
+@import "../parts/font.scss";
+@import "../parts/reset.scss";
+@import "../parts/grid.scss";
+@import "../parts/base.scss";
+
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+
+.main {
+  .section-sidebar {
+    position: relative;
+  }
+  .sidebar-content {
+    width: 100%;
+    height: 708px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+      font-size: 3.6rem;
+      margin-bottom: 10px;
+    }
+    .sub-heading {
+      font-size: 4.3rem;
+      max-width: 380px;
+      margin-bottom: 27px;
+    }
+    .desc {
+      max-width: 450px;
+    }
+  }
+  .sidebar-bg {
+    width: 49vw;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $green-200;
+    border-radius: 20px 0px 0px 20px;
+    img {
+      position: absolute;
+      height: 611px;
+      top: 78px;
+      left: -82px;
+    }
+    .side-bar-decor {
+      position: absolute;
+      bottom: 0;
+      font-size: 16.6rem;
+      color: $green-1000;
+      font-weight: 800;
+      opacity: 0.15000000596046448;
+      transform: rotate(90deg);
+      line-height: 100%;
+      width: fit-content;
+    }
+  }
+}

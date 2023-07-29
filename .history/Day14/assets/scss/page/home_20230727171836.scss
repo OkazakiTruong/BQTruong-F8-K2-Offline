@@ -1,0 +1,25 @@
+@import "../parts/variables";
+@import "../parts/font.scss";
+@import "../parts/reset.scss";
+@import "../parts/grid.scss";
+@import "../parts/mixins";
+@import "../parts/base.scss";
+
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+
+// section-sidebar
+@include section-sidebar;
+// section-quality
+@include section-quality;
+
+.section-products {
+  @include section-heading(50px, 0px);
+  @include section-product-item;
+  @include section-mb(129px);
+  .row {
+    justify-content: center;
+    column-gap: 83px;
+    row-gap: 96px;
+  }
+}

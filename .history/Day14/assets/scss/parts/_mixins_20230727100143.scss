@@ -1,0 +1,14 @@
+@mixin sectionHeading {
+  .section-heading {
+    text-align: center;
+  }
+  h2 {
+    font-size: 3.1rem;
+    font-weight: 800;
+    line-height: 131%;
+  }
+  p {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}

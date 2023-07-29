@@ -1,0 +1,30 @@
+.footer {
+  width: 100vw;
+  min-height: 407px;
+  background-color: $green-100;
+  padding-top: 67px;
+  .row {
+    justify-content: center;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    p:has(img) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .logo {
+    img {
+      margin-bottom: 18px;
+    }
+  }
+  .active {
+  }
+}

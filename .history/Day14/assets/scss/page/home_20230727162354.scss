@@ -1,0 +1,113 @@
+@import "../parts/variables";
+@import "../parts/font.scss";
+@import "../parts/reset.scss";
+@import "../parts/grid.scss";
+@import "../parts/mixins";
+@import "../parts/base.scss";
+
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+
+.main {
+  .section-sidebar {
+    position: relative;
+    @include section-mb(100px);
+  }
+  .sidebar-content {
+    width: 100%;
+    height: 708px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+      font-size: 3.6rem;
+      margin-bottom: 10px;
+    }
+    .sub-heading {
+      font-size: 4.3rem;
+      max-width: 380px;
+      margin-bottom: 27px;
+    }
+    .desc {
+      max-width: 450px;
+    }
+  }
+  .sidebar-bg {
+    width: 49vw;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $green-200;
+    @include rounded(20px, 0px, 0px, 20px);
+    .hero-img {
+      position: absolute;
+      height: 611px;
+      top: 78px;
+      left: -82px;
+    }
+    .side-bar-decor {
+      position: absolute;
+      right: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .section-quality {
+    @include section-heading(100px, 24px);
+    .section-heading {
+      h2 {
+        max-width: 558px;
+      }
+      .desc {
+        max-width: 643px;
+      }
+    }
+    .section-content {
+      position: relative;
+      .row {
+        justify-content: center;
+        align-items: center;
+        column-gap: 22px;
+        > *[class^="col"] {
+          flex-basis: row;
+          max-width: fit-content;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        @include square(235px);
+        @include rounded(50%);
+        background-color: $green-200;
+        top: 0;
+        left: 0;
+        transform: translateY(-40%);
+        z-index: 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        @include square(235px);
+        @include rounded(50%);
+        background-color: $orange-200;
+        bottom: 0;
+        right: 0;
+        transform: translateY(40%);
+        z-index: 0;
+      }
+    }
+
+    @include section-quality-item();
+    @include section-mb(200px);
+  }
+  .section-products {
+    @include section-heading(50px, 0px);
+    @include product-item;
+    .row {
+      justify-content: center;
+      column-gap: 20px;
+    }
+  }
+}

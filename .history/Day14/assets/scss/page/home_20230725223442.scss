@@ -1,0 +1,28 @@
+@import "../parts/variables";
+@import "../parts/font.scss";
+@import "../parts/reset.scss";
+@import "../parts/grid.scss";
+@import "../parts/base.scss";
+
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+
+.main {
+  .sidebar-content {
+    width: 100%;
+    height: 708px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+      font-size: 3.6rem;
+    }
+    .sub-heading {
+      font-size: 4.3rem;
+      max-width: 380px;
+    }
+    .desc {
+      width: 500px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+:root {
+  --container-width: #{$max-width};
+}
+
+input,
+textarea {
+  font-family: $inter-font;
+}
