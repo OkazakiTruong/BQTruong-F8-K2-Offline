@@ -235,197 +235,13 @@
   }
 }
 //section-news
-// @include section-news;
-.section-news {
-  @include section-heading(28px, 23px);
-  .row {
-    row-gap: 60px;
-  }
-  .section-heading {
-    .desc {
-      max-width: 658px;
-    }
-  }
-  .news-item {
-    $mb: 16px;
-    padding: 0px 12px;
-
-    .news-img {
-      margin-bottom: $mb;
-      img {
-        width: 100%;
-        // max-width: 384px;
-      }
-    }
-    .news-time-author {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: $mb;
-      .author {
-        color: $green-800;
-        font-size: 1.5rem;
-        font-weight: 500;
-      }
-      .time {
-        display: flex;
-        align-items: center;
-        column-gap: 10px;
-        span {
-          color: $grey-500;
-          font-size: 1.5rem;
-          font-weight: 500;
-        }
-      }
-    }
-    .news-heading {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: $mb;
-      line-height: 27px;
-    }
-    .content {
-      font-size: 1.6rem;
-      font-weight: 400;
-      line-height: 20px;
-    }
-  }
-  .section-content {
-    margin-bottom: 80px;
-  }
-  .section-btn {
-    display: flex;
-    justify-content: center;
-    button {
-      display: flex;
-      align-items: center;
-      column-gap: 3px;
-      padding: 16px 27px;
-      background-color: white;
-      border: $green-800 2px solid;
-      @include rounded(7px);
-    }
-  }
-  @include section-mb(100px);
-}
+@include section-news;
 //section-info
-// @include section-info;
-.section-info {
-  position: relative;
-  @include section-heading(50px, 24px);
-  .section-heading {
-    h2 {
-      max-width: 394px;
-    }
-    .desc {
-      max-width: 795px;
-    }
-  }
-  .row {
-    justify-content: center;
-    column-gap: 25px;
-    row-gap: 25px;
-    > *[class^="col-"] {
-      flex-basis: row;
-      max-width: fit-content;
-    }
-  }
-  .info-item {
-    position: relative;
-    z-index: 1;
-    min-width: 346px;
-    height: 359px;
-    background-color: white;
-    @include rounded(0, 0, 8px, 8px);
-    .info-img {
-      max-width: 100%;
-      font-size: 0;
-      height: fit-content;
-      img {
-        width: 100%;
-      }
-    }
-    .info-content {
-      padding: 25px 0px 0px 28px;
-      .content-heading {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 27px;
-        color: $orange-700;
-        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-        margin-bottom: 6px;
-      }
-      .content {
-        font-size: 1.6rem;
-      }
-    }
-  }
-  .section-decor {
-    width: 100vw;
-    height: 360px;
-    background-color: $orange-100;
-    position: absolute;
-    bottom: -115px;
-    left: 0;
-  }
-  @include section-mb(253px);
-}
+@include section-info;
 //section-certification
-.section-certification {
-  .row {
-    justify-content: center;
-    column-gap: 52px;
-    row-gap: 39px;
-  }
-  .certification-item {
-    display: flex;
-    align-items: flex-start;
-    column-gap: 16px;
-    .icon img {
-      width: 56px;
-    }
-    .heading {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 7px;
-      line-height: 27px;
-    }
-    .content {
-      font-size: 17px;
-      font-weight: 500;
-    }
-  }
-  @include section-mb(133px);
-}
+@include section-certification;
 //section-form-contact
-// @include section-form-contact;
-.section-form-contact {
-  .row {
-    align-items: center;
-  }
-  .form-contact {
-    .form-heading {
-      font-size: 2rem;
-      margin-bottom: 26px;
-    }
-    .input-group {
-      display: flex;
-      column-gap: 18px;
-      margin-bottom: 23px;
-    }
-    input,
-    textarea {
-      border: 1px solid $grey-500;
-      padding: 13px;
-      width: 100%;
-      border-radius: 7px;
-      font-size: 1.6rem;
-      font-weight: 400;
-      color: $grey-500;
-    }
-  }
-  @include section-mb(101px);
-}
+@include section-form-contact;
 
 //responsive
 @media screen and (max-width: 1499px) {
@@ -460,41 +276,6 @@
     }
     .desc {
       max-width: 450px;
-    }
-  }
-  //   section-product
-  .section-products {
-    .product-item {
-      .product-name {
-        font-size: 2rem;
-      }
-      .desc {
-        font-size: 1.2rem;
-      }
-      .price {
-        font-size: 1.2rem;
-        font-weight: 400;
-        span {
-          font-size: 2rem;
-          font-weight: 800;
-        }
-        margin-bottom: 31px;
-      }
-    }
-  }
-  // section-info
-  .section-info {
-    .section-content {
-      position: relative;
-    }
-    .row {
-      justify-content: center;
-      column-gap: 0px;
-      row-gap: 25px;
-      > *[class^="col-"] {
-        flex-basis: var(--column-width);
-        max-width: var(--column-width);
-      }
     }
   }
 }
@@ -561,86 +342,6 @@
       }
     }
   }
-  //   section-product
-  .section-products {
-    .row {
-      column-gap: 0;
-    }
-  }
-  //section-info
-  .section-info {
-    .section-content {
-      position: relative;
-    }
-    .row {
-      justify-content: center;
-      column-gap: 0px;
-      row-gap: 25px;
-      > *[class^="col-"] {
-        flex-basis: var(--column-width);
-        max-width: var(--column-width);
-      }
-    }
-    .info-item {
-      min-width: 200px;
-      width: 80%;
-      margin: 0 auto;
-    }
-    .info-content {
-      padding-bottom: 20px !important;
-      .content-heading {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 27px;
-        color: $orange-700;
-        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-        margin-bottom: 6px;
-      }
-      .content {
-        font-size: 1.6rem;
-      }
-    }
-  }
-  .section-decor {
-    width: 100vw;
-    background-color: $orange-100;
-    position: absolute;
-    height: 104% !important;
-    top: 0;
-    left: 0;
-    transform: translateY(-2%);
-  }
-  //section-certification
-  .section-certification {
-    .row {
-      justify-content: flex-start;
-      column-gap: 0px;
-    }
-    .certification-item {
-      padding: 0px 10px;
-    }
-  }
-  //section-form-contact
-  .section-form-contact {
-    .row {
-      row-gap: 20px;
-    }
-  }
-  .form-contact-left {
-    display: flex;
-    justify-content: center;
-    img {
-      width: 50%;
-    }
-  }
-  .form-contact {
-    .form-heading {
-      text-align: center;
-    }
-    .input-group {
-      padding: 0 30px;
-    }
-  }
 }
 @media screen and (max-width: 768px) {
   // section-quality
@@ -655,14 +356,6 @@
           max-width: var(--column-width);
         }
       }
-    }
-  }
-  //section-info
-  .section-info {
-    .info-item {
-      min-width: 200px;
-      width: 50%;
-      margin: 0 auto;
     }
   }
 }
@@ -681,31 +374,5 @@
   }
   .sidebar-bg {
     display: none;
-  }
-  //   section-info
-  .section-info {
-    .info-item {
-      min-width: 200px;
-      width: 60%;
-      margin: 0 auto;
-    }
-  }
-}
-@media screen and (max-width: 576px) {
-  .section-news {
-    .news-item {
-      $mb: 16px;
-      padding: 0px 40px;
-    }
-  }
-}
-@media screen and (max-width: 430px) {
-  // section-info
-  .section-info {
-    .info-item {
-      min-width: 200px;
-      width: 80%;
-      margin: 0 auto;
-    }
   }
 }

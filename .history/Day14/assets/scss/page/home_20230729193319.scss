@@ -1,0 +1,81 @@
+@import "../parts/variables";
+@import "../parts/font.scss";
+@import "../parts/reset.scss";
+@import "../parts/grid.scss";
+@import "../parts/mixins";
+@import "../parts/base.scss";
+
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+
+//common mixin
+@include background-color;
+// section-sidebar
+
+.section-sidebar {
+  position: relative;
+  @include section-mb(100px);
+}
+.sidebar-content {
+  width: 100%;
+  height: 708px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .content-decor {
+    display: none;
+  }
+  .heading {
+    font-size: 3.6rem;
+    margin-bottom: 10px;
+  }
+  .sub-heading {
+    font-size: 4.3rem;
+    max-width: 380px;
+    margin-bottom: 27px;
+  }
+  .desc {
+    max-width: 450px;
+  }
+}
+.sidebar-bg {
+  width: 49vw;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $green-200;
+  @include rounded(20px, 0px, 0px, 20px);
+  .hero-img {
+    position: absolute;
+    width: 68%;
+    top: 40%;
+    left: 0px;
+    transform: translate(-18%, -40%);
+  }
+  .side-bar-decor {
+    position: absolute;
+    font-size: 160px;
+    font-weight: 800;
+    color: $green-1000;
+    opacity: 0.15;
+    line-height: 100%;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    left: calc(100% - 34px);
+    top: 55px;
+  }
+}
+// section-quality
+@include section-quality;
+// section-product
+@include section-products;
+//section-news
+@include section-news;
+//section-info
+@include section-info;
+//section-certification
+@include section-certification;
+//section-form-contact
+@include section-form-contact;
