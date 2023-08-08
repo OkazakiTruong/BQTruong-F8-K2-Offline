@@ -1,0 +1,30 @@
+/* exercise 06 */
+#js-chessboard {
+  border: solid 1px green;
+  max-width: 600px;
+  max-height: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 40px;
+}
+.white-square {
+  width: calc(600px / 8);
+  height: calc(600px / 8);
+
+  background-color: white;
+}
+.black-square {
+  width: calc(600px / 8);
+  height: calc(600px / 8);
+  background-color: green;
+}
+/* exercise 07 */
+.multiplication-table-wrapper {
+  max-width: 1030px;
+  background-color: #ccc;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+#js-multiplication-table {
+}

@@ -1,0 +1,6 @@
+#js-chessboard {
+  border: solid 1px green;
+  max-width: 800;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
