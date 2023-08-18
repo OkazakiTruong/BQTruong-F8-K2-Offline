@@ -13,12 +13,11 @@ console.log("Exercise 01");
 console.log("Kết quả giao giữa hai mảng là: ", result);
 
 //exercise 02
-let arr = [0, 1, [2, 3], [4, 5, [6, 7]], [8, [9, 10, [11, 12]]]];
+let arr = [0, 1, [[4, 12], 5]];
 
 for (let i = 0; i < arr.length; i++) {
   if (Array.isArray(arr[i])) {
     arr = arr.flat();
-    i = i - 1;
   }
 }
 
