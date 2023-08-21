@@ -89,12 +89,9 @@ let html = `
 ${articles
   .map(function (article, index) {
     return `
-    <div class = "article ${index % 2 === 0 ? "article-right" : ""}">
+    <div class = "article">
     <img src="${article.img}" alt="img-${article.title}" />
-    <div class = "content">
-    <h2>${article.title}</h2>
-    <p>${article.desc}</p>
-    </div>
+
     </div>
     `;
   })

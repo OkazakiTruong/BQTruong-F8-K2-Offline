@@ -63,43 +63,28 @@ const articles = [
   },
 ];
 
-// let html = `<div class = "container">`;
-// for (let i = 0; i < articles.length; i++) {
-//   html += `<div class = "article">`;
-//   if (i % 2 === 0) {
-//     html += `<img src="${articles[i].img}" alt="img-${articles[i].title}" />`;
-//     html += `<div class = "content">`;
-//     html += `<h2>${articles[i].title}</h2>`;
-//     html += `<p>${articles[i].desc}</p>`;
-//     html += `</div>`;
-//   } else {
-//     html += `<div class = "content">`;
-//     html += `<h2>${articles[i].title}</h2>`;
-//     html += `<p>${articles[i].desc}</p>`;
-//     html += `</div>`;
-//     html += `<img src="${articles[i].img}" alt="img-${articles[i].title}" />`;
-//   }
-//   html += "</div>";
-// }
+let html = `<div class = "container">`;
+for (let i = 0; i < articles.length; i++) {
+  html += `<div class = "article">`;
+  if (i % 2 === 0) {
+    html += `<img src="${articles[i].img}" alt="img-${articles[i].title}" />`;
+    html += `<div class = "content">`;
+    html += `<h2>${articles[i].title}</h2>`;
+    html += `<p>${articles[i].desc}</p>`;
+    html += `</div>`;
+  } else {
+    html += `<div class = "content">`;
+    html += `<h2>${articles[i].title}</h2>`;
+    html += `<p>${articles[i].desc}</p>`;
+    html += `</div>`;
+    html += `<img src="${articles[i].img}" alt="img-${articles[i].title}" />`;
+  }
+  html += "</div>";
+}
 
-// html += `</div>`;
+html += `</div>`;
+// let html = `
 
-let html = `
-<div class = "container">
-${articles
-  .map(function (article, index) {
-    return `
-    <div class = "article ${index % 2 === 0 ? "article-right" : ""}">
-    <img src="${article.img}" alt="img-${article.title}" />
-    <div class = "content">
-    <h2>${article.title}</h2>
-    <p>${article.desc}</p>
-    </div>
-    </div>
-    `;
-  })
-  .join("")}
-</div>
-`;
+// `
 
 document.write(html);

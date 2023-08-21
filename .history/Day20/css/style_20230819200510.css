@@ -32,6 +32,6 @@
   row-gap: 20px;
   text-align: justify;
 }
-.article.article-right {
+.content.content-right {
   flex-direction: row-reverse;
 }
