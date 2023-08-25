@@ -187,13 +187,14 @@ const showWarningRegister = function () {
   if (passwordRegister.value === "") {
     passwordWarningRegister.innerText = "Vui lòng nhập thông tin";
     passwordRegister.classList.add("warning-input");
-  } else if (passwordRegister.value.length < 6) {
-    passwordWarningRegister.innerText = "Mật khẩu tối thiểu 6 - 20 ký tự";
+  } else if (passwordRegister.value.lenght < 6) {
+    passwordWarningRegister.innerText = "Mật khẩu phải lớn hơn 6 ký tự";
   } else {
     passwordRegister.classList.remove("warning-input");
     passwordWarningRegister.innerHTML = "";
     passwordFlag = true;
   }
+
   return nameFlag && emailFlag && passwordFlag;
 };
 
