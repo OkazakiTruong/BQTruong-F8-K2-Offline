@@ -1,0 +1,27 @@
+const emailLogin = document.querySelector(".email-login");
+const passwordLogin = document.querySelector(".password-login");
+const emailWarningLogin = document.querySelector(".email-login-warning");
+const passwordWarningLogin = document.querySelector(".password-login-warning");
+
+const showWarningLogin = function () {
+  if (emailLogin.value === "") {
+    emailLogin.style = "outline: 1px solid red";
+    emailWarningLogin.innerText = "vui lòng nhập thông tin";
+  } else {
+    emailLogin.style = "outline: none";
+    if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailLogin.value)) {
+      emailWarningLogin.innerText = "Vui lòng nhập đúng định dạng email";
+    }
+  }
+  if (passwordLogin.value === "") {
+    passwordLogin.style = "outline: 1px solid red";
+    passwordWarningLogin.innerText = "vui lòng nhập thông tin";
+  } else {
+    passwordLogin.style = "outline: none";
+    passwordWarningLogin.innerText = "";
+  }
+};
+emailLogin.addEventListener("blur", showWarningLogin);
+passwordLogin.addEventListener("blur", showWarningLogin);
+emailLogin.addEventListener("keyup", showWarningLogin);
+passwordLogin.addEventListener("keyup", showWarningLogin);
