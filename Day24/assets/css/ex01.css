@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  color: white;
+}
+
+body {
+  background-color: #8758ff;
+}
+
+.container {
+  background-color: black;
+  padding: 32px;
+  width: fit-content;
+  margin: 64px auto 0px;
+  background-color: #1a1a40;
+  display: flex;
+  flex-direction: column;
+  row-gap: 34px;
+  color: white;
+  border-radius: 5px;
+}
+.container .heading {
+  font-weight: 600;
+  font-size: 1.75rem;
+  text-align: center;
+}
+.container .editor-wrapper,
+.container .add-new-task {
+  display: flex;
+  border: 1px solid #8758ff;
+}
+.container .task-editor,
+.container .new-task {
+  padding: 8px 16px;
+  width: 300px;
+  background-color: #1a1a40;
+}
+.container .btn-edit,
+.container .btn-add {
+  padding: 8px 16px;
+  background-color: #8758ff;
+  color: white;
+  cursor: pointer;
+}
+.container .thing-todo-item {
+  margin-bottom: 16px;
+}
+.container .thing-todo-item .task-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #8758ff;
+  border-radius: 5px;
+}
+.container .thing-todo-item .task {
+  max-width: 300px;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+.container .thing-todo-item .done-task {
+  text-decoration: line-through;
+  color: #c5aeff;
+}
+.container .thing-todo-item .task-controllers {
+  display: flex;
+  gap: 0px 12px;
+}
+.container .thing-todo-item .task-controllers * {
+  cursor: pointer;
+}
+.container .thing-todo-item .editor-wrapper {
+  display: none;
+}
+
+/*# sourceMappingURL=ex01.css.map */
