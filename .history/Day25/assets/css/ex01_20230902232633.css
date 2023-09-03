@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+img {
+  width: 100%;
+}
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+.carousel-inner {
+  display: flex;
+  position: relative;
+  transition: translate 0.25s linear;
+}
+
+.carousel-nav div {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.carousel-nav div.prev {
+  left: 6px;
+}
+.carousel-nav div.next {
+  right: 6px;
+}
+
+.carousel-nav-radio .radio-item {
+  width: 16px;
+  height: 16px;
+  background: red;
+  border-radius: 50%;
+}

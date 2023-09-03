@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+img {
+  width: 100%;
+}
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+.carousel-inner {
+  display: flex;
+  position: relative;
+  transition: translate 0.25s linear;
+}
+
+.carousel-nav div {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.carousel-nav div.prev {
+  left: 6px;
+}
+.carousel-nav div.next {
+  right: 6px;
+}
+
+.carousel-nav-radio {
+  display: flex;
+  column-gap: 6px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.carousel-nav-radio .radio-item {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel-nav-radio .radio-item.active {
+  background-color: orange;
+}
