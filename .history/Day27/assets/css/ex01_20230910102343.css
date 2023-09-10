@@ -1,0 +1,13 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+}

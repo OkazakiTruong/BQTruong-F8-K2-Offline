@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 26 - Exercise 01</title>
+    <link rel="stylesheet" href="./assets/css/ex01.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Danh sách sản phẩm</h2>
+      <table>
+        <tr>
+          <th style="width: 10%">STT</th>
+          <th style="width: 60%">Tên sản phẩm</th>
+          <th style="width: 10%">Giá</th>
+          <th style="width: 20%">Thêm vào giỏ hàng</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="product-name">Sản phẩm 1</td>
+          <td class="product-price">1000</td>
+          <td>
+            <input class="product-number" type="number" min="1" value="1" />
+            <button class="btn-add">Thêm vào giỏ hàng</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="product-name">Sản phẩm 2</td>
+          <td class="product-price">2000</td>
+          <td>
+            <input class="product-number" type="number" min="1" value="1" />
+            <button class="btn-add">Thêm vào giỏ hàng</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="product-name">Sản phẩm 3</td>
+          <td class="product-price">3000</td>
+          <td>
+            <input class="product-number" type="number" min="1" value="1" />
+            <button class="btn-add">Thêm vào giỏ hàng</button>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="product-name">Sản phẩm 4</td>
+          <td class="product-price">4000</td>
+          <td>
+            <input class="product-number" type="number" min="1" value="1" />
+            <button class="btn-add">Thêm vào giỏ hàng</button>
+          </td>
+        </tr>
+      </table>
+      <h2>Giỏ hàng</h2>
+      <div class="cart-products">
+        <table class="table-cart-products">
+          <tr>
+            <th>STT</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+            <th>Xóa</th>
+          </tr>
+          <tr class="table-end">
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="./assets/js/ex01.js"></script>
+  </body>
+</html>

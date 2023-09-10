@@ -1,0 +1,38 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 8px 20px;
+}
+button {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+input {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.container {
+  width: 90vw;
+  margin: 20px auto;
+}
+.container > h2 {
+  margin-bottom: 20px;
+}

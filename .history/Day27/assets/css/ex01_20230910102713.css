@@ -1,0 +1,33 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 20px;
+}
+button {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.container {
+  width: fit-content;
+  margin: 20px auto;
+}
+.container > h2 {
+  margin-bottom: 20px;
+}
