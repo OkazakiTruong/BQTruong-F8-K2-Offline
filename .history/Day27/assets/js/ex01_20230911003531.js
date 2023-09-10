@@ -129,15 +129,12 @@ const updateCart = function () {
   btnUpdateCart = document.querySelector(".btn-update-cart");
   numberCart = document.querySelectorAll(".number-cart");
   btnUpdateCart.addEventListener("click", function () {
-    alert("Cập nhật giỏ hàng thành công!");
-    let temp = [];
+    alert("Cập nhật thành công!");
     numberCart.forEach((number, index) => {
       if (number.value > 0) {
         cartProducts[index].number = number.value;
-        temp.push(cartProducts[index]);
       }
     });
-    cartProducts = temp;
     updateCartTable();
   });
 };

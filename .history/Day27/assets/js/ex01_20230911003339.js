@@ -65,9 +65,7 @@ const updateLocalStorage = function () {
 const addANewProcIntoCartProcs = function (product) {
   if (cartProducts.length === 0) {
     if (Number(product.number) <= 0) {
-      alert(
-        "Số mặt hàng không thể nhỏ hơn hoặc bằng 0! Vui lòng nhập đúng định dạng!!"
-      );
+      alert("Số mặt hàng không thể nhỏ hơn hoặc bằng 0");
       resetProductsInput();
     } else {
       cartProducts.push(product);
@@ -78,10 +76,8 @@ const addANewProcIntoCartProcs = function (product) {
       if (Number(cartProc.id) === Number(product.id)) {
         flag = false;
         if (Number(product.number) <= 0) {
-          alert(
-            "Số mặt hàng không thể nhỏ hơn hoặc bằng 0! Vui lòng nhập đúng định dạng!!"
-          );
-          resetProductsInput();
+          console.log(cartProc.number);
+          cartProc.number = Number(cartProc.number) + 1;
         } else {
           cartProc.number = Number(cartProc.number) + Number(product.number);
         }
@@ -129,15 +125,12 @@ const updateCart = function () {
   btnUpdateCart = document.querySelector(".btn-update-cart");
   numberCart = document.querySelectorAll(".number-cart");
   btnUpdateCart.addEventListener("click", function () {
-    alert("Cập nhật giỏ hàng thành công!");
-    let temp = [];
+    alert("Cập nhật thành công!");
     numberCart.forEach((number, index) => {
       if (number.value > 0) {
         cartProducts[index].number = number.value;
-        temp.push(cartProducts[index]);
       }
     });
-    cartProducts = temp;
     updateCartTable();
   });
 };
