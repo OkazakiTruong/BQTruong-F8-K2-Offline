@@ -130,10 +130,10 @@ const showCartTable = function () {
     <thead>
     <tr>
     <th style="width:10%">Stt</th>
-    <th style="width:40%">Tên sản phẩm</th>
-    <th style="width:15%">Giá</th>
+    <th style="width:50%">Tên sản phẩm</th>
+    <th style="width:10%">Giá</th>
     <th style="width:10%">Số lượng</th>
-    <th style="width:15%">Thành tiền</th>
+    <th style="width:10%">Thành tiền</th>
     <th style="width:10%">Xóa</th>
     </tr>
     </thead>
