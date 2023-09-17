@@ -1,0 +1,1 @@
+const autoIndex = function () {};

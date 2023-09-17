@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --background-color: #4286f4;
+  --background-color-item: #8bb3f4;
+}
+
+.list {
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  width: 40%;
+  margin: 10px auto;
+}
+.list-item {
+  padding: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: var(--background-color-item);
+}
+
+.list-item:not(.list-item:last-child()) {
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/ex01.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper-player">
+        <div class="play-btn">
+          <i class="fa-sharp fa-solid fa-play active"></i>
+          <i class="fa-solid fa-pause"></i>
+        </div>
+        <div class="player">
+          <span>00:00</span>
+          <div class="progress-bar">
+            <span class="progress-time">00:00</span>
+            <div class="progress">
+              <span></span>
+            </div>
+          </div>
+          <span>00:00</span>
+        </div>
+      </div>
+
+      <div class="karaoke">
+        <button class="karaoke-btn">Hát Karaoke</button>
+        <div class="karaoke-layout">
+          <div class="karaoke-header">
+            <div class="heading">Karaoke</div>
+            <div class="btn-close"><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="karaoke-lyric">
+            <h2>Thu cuối</h2>
+            <p>Yanbi, Mr.T, Hằng Bingbong</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio src="./assets/mp3/thuCuoi.mp3" class="audio"></audio>
+    <script src="./assets/js/ex01.js"></script>
+  </body>
+</html>
