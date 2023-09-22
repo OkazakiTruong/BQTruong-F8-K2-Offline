@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 74, 120, 1) 0%,
+    rgba(127, 255, 212, 1) 37%
+  );
+}
+.editor-container {
+  width: 80%;
+  margin: 20px auto;
+}

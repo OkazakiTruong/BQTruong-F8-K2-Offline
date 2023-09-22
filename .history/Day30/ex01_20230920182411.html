@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 30 - Editor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/ex01.css" />
+
+    <script src="./assets/js/ex01.js" defer></script>
+  </head>
+  <body>
+    <main id="main">
+      <section class="editor-container">
+        <div class="editor-header">
+          <h1 class="heading">Doc Editor</h1>
+        </div>
+        <div class="editor-option">
+          <div class="right-col">
+            <div class="dropdown file">
+              <div class="dropdown-select">
+                <span>File</span>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div class="dropdown-list">
+                <div class="dropdown-item">New File</div>
+                <div class="dropdown-item">Save as TXT</div>
+                <div class="dropdown-item">Save as PFD</div>
+              </div>
+            </div>
+            <input class="file-name" type="text" value="untitled" />
+          </div>
+          <div class="left-col">
+            <button class="bold-option">b</button>
+            <button class="underline-option">u</button>
+            <button class="lean-option">i</button>
+            <input type="color" class="color-option" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
