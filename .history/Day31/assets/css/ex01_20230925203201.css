@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #ff9100 */
+body {
+  background-color: #03bdf0;
+}
+.timer-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50, -50%);
+}
