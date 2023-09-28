@@ -64,11 +64,6 @@ class F8 {
               counter++;
               this.counterNode.textContent = counter;
             }
-            if (eventDoing === "count--") {
-              let counter = this.counterNode.textContent;
-              counter--;
-              this.counterNode.textContent = counter;
-            }
           }
         }
         dataValueReturn(inputData) {

@@ -50,25 +50,29 @@ class F8 {
                 /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
               );
               if (regex) {
-                btn.addEventListener(regex.groups.event, () => {
-                  this.handleEvent(regex.groups.eventDoing);
+                btn.addEventListener(regex.groups.event, function () {
+                  console.log("on click");
                 });
               }
+
+              // let msg = "Xin-chao-xin";
+              // console.log(msg.match(/(.+?)/g));
+
+              // if (btn.getAttribute("v-on:click") === "count++") {
+              //   btn.addEventListener("click", () => {
+              //     let counter = Number(this.counterNode.textContent);
+              //     counter++;
+              //     this.counterNode.textContent = counter;
+              //   });
+              // }
+              // if (btn.getAttribute("v-on:click") === "count--") {
+              //   btn.addEventListener("click", () => {
+              //     let counter = Number(this.counterNode.textContent);
+              //     counter--;
+              //     this.counterNode.textContent = counter;
+              //   });
+              // }
             });
-          }
-        }
-        handleEvent(eventDoing) {
-          if (eventDoing) {
-            if (eventDoing === "count++") {
-              let counter = this.counterNode.textContent;
-              counter++;
-              this.counterNode.textContent = counter;
-            }
-            if (eventDoing === "count--") {
-              let counter = this.counterNode.textContent;
-              counter--;
-              this.counterNode.textContent = counter;
-            }
           }
         }
         dataValueReturn(inputData) {

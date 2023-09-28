@@ -50,27 +50,14 @@ class F8 {
                 /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
               );
               if (regex) {
-                btn.addEventListener(regex.groups.event, () => {
+                btn.addEventListener(regex.groups.event, function () {
                   this.handleEvent(regex.groups.eventDoing);
                 });
               }
             });
           }
         }
-        handleEvent(eventDoing) {
-          if (eventDoing) {
-            if (eventDoing === "count++") {
-              let counter = this.counterNode.textContent;
-              counter++;
-              this.counterNode.textContent = counter;
-            }
-            if (eventDoing === "count--") {
-              let counter = this.counterNode.textContent;
-              counter--;
-              this.counterNode.textContent = counter;
-            }
-          }
-        }
+        handleEvent() {}
         dataValueReturn(inputData) {
           for (let key of Object.keys(this.data)) {
             if (inputData === key) {

@@ -58,18 +58,7 @@ class F8 {
           }
         }
         handleEvent(eventDoing) {
-          if (eventDoing) {
-            if (eventDoing === "count++") {
-              let counter = this.counterNode.textContent;
-              counter++;
-              this.counterNode.textContent = counter;
-            }
-            if (eventDoing === "count--") {
-              let counter = this.counterNode.textContent;
-              counter--;
-              this.counterNode.textContent = counter;
-            }
-          }
+          console.log(eventDoing);
         }
         dataValueReturn(inputData) {
           for (let key of Object.keys(this.data)) {

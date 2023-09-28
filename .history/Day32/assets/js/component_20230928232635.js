@@ -46,29 +46,25 @@ class F8 {
           const btnList = shadow.querySelectorAll("button");
           if (btnList) {
             Array.from(btnList).forEach((btn) => {
-              let regex = btn.outerHTML.match(
-                /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
+              console.log(
+                btn.outerHTML.match(/^(v-on):(<event>.+?=)(".+?")$/g)
               );
-              if (regex) {
-                btn.addEventListener(regex.groups.event, () => {
-                  this.handleEvent(regex.groups.eventDoing);
-                });
-              }
+
+              // if (btn.getAttribute("v-on:click") === "count++") {
+              //   btn.addEventListener("click", () => {
+              //     let counter = Number(this.counterNode.textContent);
+              //     counter++;
+              //     this.counterNode.textContent = counter;
+              //   });
+              // }
+              // if (btn.getAttribute("v-on:click") === "count--") {
+              //   btn.addEventListener("click", () => {
+              //     let counter = Number(this.counterNode.textContent);
+              //     counter--;
+              //     this.counterNode.textContent = counter;
+              //   });
+              // }
             });
-          }
-        }
-        handleEvent(eventDoing) {
-          if (eventDoing) {
-            if (eventDoing === "count++") {
-              let counter = this.counterNode.textContent;
-              counter++;
-              this.counterNode.textContent = counter;
-            }
-            if (eventDoing === "count--") {
-              let counter = this.counterNode.textContent;
-              counter--;
-              this.counterNode.textContent = counter;
-            }
           }
         }
         dataValueReturn(inputData) {

@@ -12,6 +12,7 @@ class F8 {
           shadow.append(this.template.content.cloneNode(true));
           this.handleData(shadow, "h2");
           this.handleBtn(shadow);
+          console.log(this.counterNode);
         }
         handleData(shadow, query) {
           if (data) {
@@ -44,31 +45,26 @@ class F8 {
         }
         handleBtn(shadow) {
           const btnList = shadow.querySelectorAll("button");
+          console.log(btnList);
           if (btnList) {
             Array.from(btnList).forEach((btn) => {
-              let regex = btn.outerHTML.match(
-                /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
-              );
-              if (regex) {
-                btn.addEventListener(regex.groups.event, () => {
-                  this.handleEvent(regex.groups.eventDoing);
-                });
-              }
+              console.log(btn.outerHTML.match(/v-on+:\w/g));
+
+              // if (btn.getAttribute("v-on:click") === "count++") {
+              //   btn.addEventListener("click", () => {
+              //     let counter = Number(this.counterNode.textContent);
+              //     counter++;
+              //     this.counterNode.textContent = counter;
+              //   });
+              // }
+              // if (btn.getAttribute("v-on:click") === "count--") {
+              //   btn.addEventListener("click", () => {
+              //     let counter = Number(this.counterNode.textContent);
+              //     counter--;
+              //     this.counterNode.textContent = counter;
+              //   });
+              // }
             });
-          }
-        }
-        handleEvent(eventDoing) {
-          if (eventDoing) {
-            if (eventDoing === "count++") {
-              let counter = this.counterNode.textContent;
-              counter++;
-              this.counterNode.textContent = counter;
-            }
-            if (eventDoing === "count--") {
-              let counter = this.counterNode.textContent;
-              counter--;
-              this.counterNode.textContent = counter;
-            }
           }
         }
         dataValueReturn(inputData) {
