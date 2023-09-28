@@ -9,14 +9,15 @@ Window.prototype.mySetInterval = function (myFunction, timeStamp) {
       index = 0;
     }
     myPlay = window.requestAnimationFrame(play);
+    console.log(myPlay);
+    return myPlay;
   }
   myPlay = window.requestAnimationFrame(play);
-  // return myPlay;
-  console.log(typeof myPlay);
 };
 Window.prototype.myCancelSetInterval = function (mySetIntervalId) {
-  window.cancelAnimationFrame(mySetIntervalId);
+  this.window.cancelAnimationFrame(mySetIntervalId);
 };
+console.log(mySetInterval);
 const timerContent = document.querySelector(".timer-content");
 const getLinkBtn = timerContent.nextElementSibling;
 
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       timer--;
       if (timer <= 0) {
         timer = 0;
-        myCancelSetInterval(60);
+        myCancelSetInterval(mySetIntervalId);
         getLinkBtn.classList.add("active");
         getLinkBtn.addEventListener("click", function () {
           window.location.href = "https://fullstack.edu.vn/";
@@ -39,4 +40,5 @@ document.addEventListener("DOMContentLoaded", function () {
     1000,
     timer * 1000
   );
+  // console.log(mySetIntervalId);
 });

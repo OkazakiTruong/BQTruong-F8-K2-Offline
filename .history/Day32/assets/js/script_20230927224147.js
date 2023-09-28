@@ -1,0 +1,57 @@
+class F8 {
+  constructor() {}
+  static component(componentName, { data, template }) {
+    customElements.define(
+      componentName,
+      class extends HTMLElement {
+        constructor() {
+          super();
+          this.template = document.createElement("template");
+          this.template.innerHTML = template;
+          const shadow = this.attachShadow({ mode: "open" });
+          shadow.append(this.template.content.cloneNode(true));
+          this.handleData(shadow);
+        }
+        handleData(shadow) {
+          if (data) {
+            let h2List = shadow.querySelectorAll("h2");
+            this.data = data();
+            h2List.forEach((h2) => {
+              if (h2.textContent.match(/{{.+?}}/)) {
+                let splitArr = h2.textContent.split(" ");
+                splitArr.forEach((item, index) => {
+                  if (item.match(/{{.+?}}/)) {
+                    let inputData = this.dataValueReturn
+                    h1.append(document.createTextNode());
+                  } else {
+                    if (item !== "") {
+                      h1;
+                    }
+                  }
+                });
+              }
+            });
+          }
+        }
+        dataValueReturn(inputData) {
+          for (let key of Object.keys(inputData)) {
+            if (inputData === key) {
+              return this.data[key];
+            }
+          }
+          return null
+        }
+      }
+    );
+  }
+}
+
+
+for (let key of Object.keys(this.data)) {
+    if (
+      
+    ) {
+      h2.textContent = this.data[key];
+      break;
+    }
+  }

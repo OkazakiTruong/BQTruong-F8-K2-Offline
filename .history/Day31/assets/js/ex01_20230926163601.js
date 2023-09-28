@@ -15,7 +15,7 @@ Window.prototype.mySetInterval = function (myFunction, timeStamp) {
   console.log(typeof myPlay);
 };
 Window.prototype.myCancelSetInterval = function (mySetIntervalId) {
-  window.cancelAnimationFrame(mySetIntervalId);
+  this.window.cancelAnimationFrame(mySetIntervalId);
 };
 const timerContent = document.querySelector(".timer-content");
 const getLinkBtn = timerContent.nextElementSibling;
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       timer--;
       if (timer <= 0) {
         timer = 0;
-        myCancelSetInterval(60);
+        myCancelSetInterval(mySetIntervalId);
         getLinkBtn.classList.add("active");
         getLinkBtn.addEventListener("click", function () {
           window.location.href = "https://fullstack.edu.vn/";

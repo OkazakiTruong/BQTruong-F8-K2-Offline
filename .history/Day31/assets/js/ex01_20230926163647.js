@@ -15,7 +15,7 @@ Window.prototype.mySetInterval = function (myFunction, timeStamp) {
   console.log(typeof myPlay);
 };
 Window.prototype.myCancelSetInterval = function (mySetIntervalId) {
-  window.cancelAnimationFrame(mySetIntervalId);
+  this.window.cancelAnimationFrame(mySetIntervalId);
 };
 const timerContent = document.querySelector(".timer-content");
 const getLinkBtn = timerContent.nextElementSibling;
