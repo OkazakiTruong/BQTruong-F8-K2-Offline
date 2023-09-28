@@ -12,6 +12,8 @@ class F8 {
           shadow.append(this.template.content.cloneNode(true));
           this.handleData(shadow, "h2");
           this.handleBtn(shadow);
+          let text = "v-on xin chao v-on";
+          console.log(text.match(/v-on/g));
         }
         handleData(shadow, query) {
           if (data) {

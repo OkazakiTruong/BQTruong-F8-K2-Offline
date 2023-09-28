@@ -32,9 +32,6 @@ class F8 {
                   if (item.match(/{{counter}}/)) {
                     this.counterNode = nodeChange;
                   }
-                  if (item.match(/{{title}}/)) {
-                    this.titleNode = nodeChange;
-                  }
                   element.appendChild(nodeChange);
                 } else {
                   element.appendChild(
@@ -73,7 +70,7 @@ class F8 {
               this.counterNode.textContent = counter;
             }
             if (eventDoing.match(/[\s]*(title)[\s]*=/)) {
-              this.titleNode.textContent = eventDoing.match(
+              let title = eventDoing.match(
                 /[\s]*(title)[\s]*=[\s]*'(?<title>.+?)'[\s]*/
               ).groups.title;
             }

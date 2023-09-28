@@ -15,7 +15,7 @@ F8.component("counter-app", {
              <button v-on:click="count--">-</button>
              <button v-on:click="count++">+</button>
              <button v-on:dblclick="title = 'Yay! Version 2 is updated successfully!!'">Double click here to change Title</button>
-             <button v-on:mouseover="title = 'Hmmm! You are mousing over this btn !!' v-on:mouseout="title = 'You mouse out ' ">Mouse over here to change Title</button>
+             <button v-on:mouseover="title = 'OMG! Version 1000 is updated successfully!!'">Mouser over here to change Title</button>
 
      `,
 });

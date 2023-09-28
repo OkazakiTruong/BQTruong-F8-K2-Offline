@@ -21,6 +21,7 @@ class F8 {
               let splitArr = element.textContent.split(" ");
               element.innerHTML = "";
               splitArr.forEach((item) => {
+                console.log(item);
                 if (item.match(/{{.+?}}/)) {
                   let inputData = item
                     .match(/{{.+?}}/)[0]
@@ -31,9 +32,6 @@ class F8 {
                   let nodeChange = document.createTextNode(dataValue);
                   if (item.match(/{{counter}}/)) {
                     this.counterNode = nodeChange;
-                  }
-                  if (item.match(/{{title}}/)) {
-                    this.titleNode = nodeChange;
                   }
                   element.appendChild(nodeChange);
                 } else {
@@ -73,7 +71,7 @@ class F8 {
               this.counterNode.textContent = counter;
             }
             if (eventDoing.match(/[\s]*(title)[\s]*=/)) {
-              this.titleNode.textContent = eventDoing.match(
+              let title = eventDoing.match(
                 /[\s]*(title)[\s]*=[\s]*'(?<title>.+?)'[\s]*/
               ).groups.title;
             }

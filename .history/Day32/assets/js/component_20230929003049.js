@@ -73,7 +73,7 @@ class F8 {
               this.counterNode.textContent = counter;
             }
             if (eventDoing.match(/[\s]*(title)[\s]*=/)) {
-              this.titleNode.textContent = eventDoing.match(
+              let title = eventDoing.match(
                 /[\s]*(title)[\s]*=[\s]*'(?<title>.+?)'[\s]*/
               ).groups.title;
             }

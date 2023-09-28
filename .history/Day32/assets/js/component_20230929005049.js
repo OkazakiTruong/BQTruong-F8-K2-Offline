@@ -12,6 +12,8 @@ class F8 {
           shadow.append(this.template.content.cloneNode(true));
           this.handleData(shadow, "h2");
           this.handleBtn(shadow);
+          let text = `v-on:mouseover="title = 'Hmmm! You are mousing over this btn !!' v-on:mouseout="title = 'You mouse out'"`;
+          console.log(text.match(/v-on:(?<event>.+?)="(?<eventDoing>.+?)"/g));
         }
         handleData(shadow, query) {
           if (data) {

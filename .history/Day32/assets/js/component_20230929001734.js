@@ -32,9 +32,6 @@ class F8 {
                   if (item.match(/{{counter}}/)) {
                     this.counterNode = nodeChange;
                   }
-                  if (item.match(/{{title}}/)) {
-                    this.titleNode = nodeChange;
-                  }
                   element.appendChild(nodeChange);
                 } else {
                   element.appendChild(
@@ -72,10 +69,12 @@ class F8 {
               counter--;
               this.counterNode.textContent = counter;
             }
-            if (eventDoing.match(/[\s]*(title)[\s]*=/)) {
-              this.titleNode.textContent = eventDoing.match(
-                /[\s]*(title)[\s]*=[\s]*'(?<title>.+?)'[\s]*/
-              ).groups.title;
+            if (eventDoing.match(/"[\s]*(title)[\s]*=/)) {
+              console.log("true");
+              let regex = eventDoing.match(
+                /"[\s]*(title)[\s]*=\s*'(?<title>.+?)'"/
+              );
+              // console.log(regex);
             }
           }
         }
