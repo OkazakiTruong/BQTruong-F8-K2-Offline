@@ -12,8 +12,10 @@ F8.component("counter-app", {
   template: `
              <h2>{{title}}</h2>
              <h2>You count {{counter}} times</h2>
-             <button v-on:click="count--">-</button>
-             <button v-on:click="count++">+</button>
+             <h2>You count {{counter}} times</h2>
+
+             <button v-on:click="count-- count2--">-</button>
+             <button v-on:click="count++ count2++">+</button>
              <button v-on:dblclick="title = 'Yay! Version 2 is updated successfully!!'">Double click here to change Title</button>
              <button v-on:mouseover="title = 'Hmmm! You are mousing over this btn !!'" v-on:mouseout="title = 'You mouse out ' ">Mouse over here to change Title</button>
 

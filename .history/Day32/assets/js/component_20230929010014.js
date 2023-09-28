@@ -12,6 +12,8 @@ class F8 {
           shadow.append(this.template.content.cloneNode(true));
           this.handleData(shadow, "h2");
           this.handleBtn(shadow);
+          // let text = `<button v-on:mouseover="title = 'Hmmm! You are mousing over this btn !!' v-on:mouseout="title = 'You mouse out ' ">`;
+          // console.log(text.match(/(v-on:.+?'.+?')/));
         }
         handleData(shadow, query) {
           if (data) {
@@ -49,16 +51,18 @@ class F8 {
           const btnList = shadow.querySelectorAll("button");
           if (btnList) {
             Array.from(btnList).forEach((btn) => {
-              let numberEvent = btn.outerHTML.match(/(v-on:.+?".+?")/g);
+              let numberEvent = btn.outerHTML.match(/(v-on:.+?'.+?')/);
+              console.log(numberEvent);
               for (let i = 0; i < numberEvent.length; i++) {
-                let regex = numberEvent[i].match(
-                  /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
-                );
-                if (regex) {
-                  btn.addEventListener(regex.groups.event, () => {
-                    this.handleEvent(regex.groups.eventDoing);
-                  });
-                }
+                console.log(numberEvent);
+              }
+              let regex = btn.outerHTML.match(
+                /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
+              );
+              if (regex) {
+                btn.addEventListener(regex.groups.event, () => {
+                  this.handleEvent(regex.groups.eventDoing);
+                });
               }
             });
           }

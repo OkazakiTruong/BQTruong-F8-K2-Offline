@@ -49,16 +49,15 @@ class F8 {
           const btnList = shadow.querySelectorAll("button");
           if (btnList) {
             Array.from(btnList).forEach((btn) => {
-              let numberEvent = btn.outerHTML.match(/(v-on:.+?".+?")/g);
-              for (let i = 0; i < numberEvent.length; i++) {
-                let regex = numberEvent[i].match(
-                  /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
-                );
-                if (regex) {
-                  btn.addEventListener(regex.groups.event, () => {
-                    this.handleEvent(regex.groups.eventDoing);
-                  });
-                }
+              let numberEvent = btn.outerHTML.match(/(v-on:.+?'.+?')/);
+              console.log(numberEvent);
+              let regex = btn.outerHTML.match(
+                /v-on:(?<event>.+?)="(?<eventDoing>.+?)"/
+              );
+              if (regex) {
+                btn.addEventListener(regex.groups.event, () => {
+                  this.handleEvent(regex.groups.eventDoing);
+                });
               }
             });
           }
