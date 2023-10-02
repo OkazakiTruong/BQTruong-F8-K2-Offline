@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  min-width: 800px;
+  padding: 20px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.btn-speak {
+  padding: 20px;
+  cursor: pointer;
+  background-color: aquamarine;
+  border-radius: 99px;
+}
+.btn-speak:hover {
+  background-color: orange;
+}
+.btn-speak.speaking {
+  background-color: orange;
+}
+
+.your-request,
+.value-container {
+  color: orange;
+}
+.value-container {
+  border: 1px solid orange;
+  padding: 20px 40px;
+}
+.your-request.done,
+.value-container.done {
+  color: aquamarine;
+}
+.value-container.done {
+  border: 1px solid;
+}

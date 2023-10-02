@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  min-width: 800px;
+  padding: 20px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.btn-speak {
+  padding: 20px;
+  cursor: pointer;
+  background-color: aquamarine;
+  border-radius: 99px;
+}
+.btn-speak:hover {
+  background-color: orange;
+}
+.btn-speak.speaking {
+  background-color: orange;
+}
