@@ -101,7 +101,7 @@ const doingTask = (value) => {
   if (value.match(/Bài hát/gi)) {
     task = "I'm searching this song for you";
     flag = true;
-    let regex = value.match(/(Bài hát)\s(?<song>.+)/i);
+    let regex = value.match(/(Bài hát)/i);
     console.log(regex);
     let song = regex.groups.song.replaceAll(" ", "%20").replaceAll("/", "%2F");
     href = "https://zingmp3.vn/tim-kiem/tat-ca?q=";
