@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Easy Todo App</h1>
+      <div class="controller">
+        <div class="search-task">
+          <input
+            type="text"
+            class="input-search-task"
+            placeholder="Add a new task"
+          />
+          <div class="add-new-task-popup">
+            <input type="text" placeholder="Add Todos" />
+            <hr />
+          </div>
+          <button class="btn-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <button class="btn-add">Add Todo</button>
+      </div>
+      <div class="list-tasks"></div>
+    </div>
+    <script type="module" src="./js/script.js" defer></script>
+  </body>
+</html>

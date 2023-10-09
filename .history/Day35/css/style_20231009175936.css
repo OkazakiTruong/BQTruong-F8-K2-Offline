@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .heading {
+  margin-bottom: 20px;
+}
+.controller {
+  display: flex;
+  column-gap: 10px;
+}
+.input-search-task {
+  padding: 10px;
+  width: 400px;
+}
