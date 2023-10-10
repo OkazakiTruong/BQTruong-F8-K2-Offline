@@ -114,7 +114,6 @@ button {
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
 }
 .btn-complete-todo:hover {
   background-color: rgb(0, 94, 0);
