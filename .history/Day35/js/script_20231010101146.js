@@ -19,8 +19,7 @@ const editPopupSave = document.querySelector(".edit-task-popup .btn-save");
 const editPopupInput = document.querySelector(".edit-task-popup input");
 
 btnCompleteTodos.addEventListener("click", () => {
-  btnCompleteTodos.classList.toggle("click");
-  listTasksDone.classList.toggle("click");
+  btnCompleteTodos.classList.add("click");
 });
 btnAddTask.addEventListener("click", () => {
   overlay.classList.add("active");

@@ -116,15 +116,11 @@ button {
   margin-top: 20px;
   border-radius: 10px;
 }
-.btn-complete-todo:hover {
-  background-color: rgb(0, 94, 0);
-}
 .btn-complete-todo i {
   margin-left: 10px;
   padding: 6px;
   border: 1px solid white;
   border-radius: 99px;
-  transition: 0.3s linear;
 }
 .list-tasks-done {
   margin-top: 20px;
@@ -133,7 +129,7 @@ button {
   display: none;
 }
 .btn-complete-todo.click i {
-  transform: rotate(90deg);
+  transform: rotate(45deg);
 }
 .list-tasks-done.click {
   display: flex;

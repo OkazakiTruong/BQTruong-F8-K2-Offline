@@ -2,8 +2,8 @@ import { client } from "./client.js";
 
 const listTasks = document.querySelector(".list-tasks");
 const listTasksDone = document.querySelector(".list-tasks-done");
-const btnCompleteTodos = document.querySelector(".btn-complete-todo");
-const numTaskDone = btnCompleteTodos.querySelector("span");
+const btnCompletTodos = document.querySelector(".btn-complete-todo");
+const numTaskDone = btnCompletTodos.querySelector("span");
 const inputSearchTask = document.querySelector(".input-search-task");
 const btnAddTask = document.querySelector(".btn-add");
 const overlay = document.querySelector(".overlay");
@@ -18,10 +18,6 @@ const editPopupCancel = document.querySelector(".edit-task-popup .btn-cancel");
 const editPopupSave = document.querySelector(".edit-task-popup .btn-save");
 const editPopupInput = document.querySelector(".edit-task-popup input");
 
-btnCompleteTodos.addEventListener("click", () => {
-  btnCompleteTodos.classList.toggle("click");
-  listTasksDone.classList.toggle("click");
-});
 btnAddTask.addEventListener("click", () => {
   overlay.classList.add("active");
   addNewPopup.classList.add("active");
@@ -98,22 +94,12 @@ const deleteATask = async (id, url) => {
   console.log(response);
   await showListTask();
 };
-const editATask = async (id, url) => {
-  const { response } = await client.patch(`${url}/${id}`, {
+const editATask = async (id) => {
+  const { response } = await client.patch(`/tasks/${id}`, {
     content: editPopupInput.value,
   });
   console.log(response);
   closeEditPopup();
-  showListTask();
-};
-
-const doneATask = async (id, url1, url2) => {
-  const { data } = await client.get(`${url1}/${id}`);
-  const content = data.content;
-  await client.delete(`${url1}/${id}`);
-  await client.post(`${url2}`, {
-    content: content,
-  });
   showListTask();
 };
 
@@ -134,16 +120,16 @@ const addEventForTaskController = () => {
     btnEdit.addEventListener("click", function () {
       openEditPopup(taskName);
       editPopupSave.addEventListener("click", () => {
-        editATask(taskId, "/tasks");
+        editATask(taskId);
       });
       editPopupInput.addEventListener("keyup", (e) => {
         if (e.key === "Enter") {
-          editATask(taskId, "/tasks");
+          editATask(taskId);
         }
       });
     });
     btnDone.addEventListener("click", function () {
-      doneATask(taskId, "/tasks", "/tasks-done");
+      console.log("done");
     });
   });
 };
@@ -165,16 +151,16 @@ const addEventForTaskDoneController = () => {
     btnEdit.addEventListener("click", function () {
       openEditPopup(taskName);
       editPopupSave.addEventListener("click", () => {
-        editATask(taskId, "/tasks-done");
+        editATask(taskId);
       });
       editPopupInput.addEventListener("keyup", (e) => {
         if (e.key === "Enter") {
-          editATask(taskId, "/tasks-done");
+          editATask(taskId);
         }
       });
     });
     btnDone.addEventListener("click", function () {
-      doneATask(taskId, "/tasks-done", "/tasks");
+      console.log("done");
     });
   });
 };

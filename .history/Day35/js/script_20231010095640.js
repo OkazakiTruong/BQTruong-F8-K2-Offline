@@ -2,8 +2,8 @@ import { client } from "./client.js";
 
 const listTasks = document.querySelector(".list-tasks");
 const listTasksDone = document.querySelector(".list-tasks-done");
-const btnCompleteTodos = document.querySelector(".btn-complete-todo");
-const numTaskDone = btnCompleteTodos.querySelector("span");
+const btnCompletTodos = document.querySelector(".btn-complete-todo");
+const numTaskDone = btnCompletTodos.querySelector("span");
 const inputSearchTask = document.querySelector(".input-search-task");
 const btnAddTask = document.querySelector(".btn-add");
 const overlay = document.querySelector(".overlay");
@@ -18,10 +18,6 @@ const editPopupCancel = document.querySelector(".edit-task-popup .btn-cancel");
 const editPopupSave = document.querySelector(".edit-task-popup .btn-save");
 const editPopupInput = document.querySelector(".edit-task-popup input");
 
-btnCompleteTodos.addEventListener("click", () => {
-  btnCompleteTodos.classList.toggle("click");
-  listTasksDone.classList.toggle("click");
-});
 btnAddTask.addEventListener("click", () => {
   overlay.classList.add("active");
   addNewPopup.classList.add("active");
@@ -174,7 +170,7 @@ const addEventForTaskDoneController = () => {
       });
     });
     btnDone.addEventListener("click", function () {
-      doneATask(taskId, "/tasks-done", "/tasks");
+      console.log("done");
     });
   });
 };

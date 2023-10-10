@@ -13,7 +13,6 @@ input {
 }
 input:focus {
   border: 1px solid #080808;
-  outline: 1px solid blue;
 }
 button {
   cursor: pointer;
@@ -93,22 +92,6 @@ button {
 .task-controller .btn-done {
   background-color: #ccc;
 }
-.list-tasks-done .task-controller .btn-done {
-  background-color: green;
-}
-
-.task-controller .btn-delete:hover {
-  background-color: rgb(182, 0, 0);
-}
-.task-controller .btn-edit:hover {
-  background-color: rgb(0, 0, 175);
-}
-.task-controller .btn-done:hover {
-  background-color: green;
-}
-.list-tasks-done .task-controller .btn-done:hover {
-  background-color: rgb(1, 85, 1);
-}
 
 .btn-complete-todo {
   padding: 20px;
@@ -116,27 +99,11 @@ button {
   margin-top: 20px;
   border-radius: 10px;
 }
-.btn-complete-todo:hover {
-  background-color: rgb(0, 94, 0);
-}
-.btn-complete-todo i {
-  margin-left: 10px;
-  padding: 6px;
-  border: 1px solid white;
-  border-radius: 99px;
-  transition: 0.3s linear;
-}
 .list-tasks-done {
   margin-top: 20px;
+  display: flex;
   flex-direction: column;
   row-gap: 20px;
-  display: none;
-}
-.btn-complete-todo.click i {
-  transform: rotate(90deg);
-}
-.list-tasks-done.click {
-  display: flex;
 }
 .popup {
   position: fixed;

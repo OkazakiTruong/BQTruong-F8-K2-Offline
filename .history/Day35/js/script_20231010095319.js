@@ -2,8 +2,8 @@ import { client } from "./client.js";
 
 const listTasks = document.querySelector(".list-tasks");
 const listTasksDone = document.querySelector(".list-tasks-done");
-const btnCompleteTodos = document.querySelector(".btn-complete-todo");
-const numTaskDone = btnCompleteTodos.querySelector("span");
+const btnCompletTodos = document.querySelector(".btn-complete-todo");
+const numTaskDone = btnCompletTodos.querySelector("span");
 const inputSearchTask = document.querySelector(".input-search-task");
 const btnAddTask = document.querySelector(".btn-add");
 const overlay = document.querySelector(".overlay");
@@ -18,10 +18,6 @@ const editPopupCancel = document.querySelector(".edit-task-popup .btn-cancel");
 const editPopupSave = document.querySelector(".edit-task-popup .btn-save");
 const editPopupInput = document.querySelector(".edit-task-popup input");
 
-btnCompleteTodos.addEventListener("click", () => {
-  btnCompleteTodos.classList.toggle("click");
-  listTasksDone.classList.toggle("click");
-});
 btnAddTask.addEventListener("click", () => {
   overlay.classList.add("active");
   addNewPopup.classList.add("active");
@@ -110,11 +106,7 @@ const editATask = async (id, url) => {
 const doneATask = async (id, url1, url2) => {
   const { data } = await client.get(`${url1}/${id}`);
   const content = data.content;
-  await client.delete(`${url1}/${id}`);
-  await client.post(`${url2}`, {
-    content: content,
-  });
-  showListTask();
+  const { response } = await client.delete(`${url1}/${id}`);
 };
 
 const addEventForTaskController = () => {
@@ -143,7 +135,7 @@ const addEventForTaskController = () => {
       });
     });
     btnDone.addEventListener("click", function () {
-      doneATask(taskId, "/tasks", "/tasks-done");
+      doneATask(taskId, "/tasks", "tasks-done");
     });
   });
 };
@@ -174,7 +166,7 @@ const addEventForTaskDoneController = () => {
       });
     });
     btnDone.addEventListener("click", function () {
-      doneATask(taskId, "/tasks-done", "/tasks");
+      console.log("done");
     });
   });
 };
