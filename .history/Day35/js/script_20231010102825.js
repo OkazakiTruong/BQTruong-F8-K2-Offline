@@ -71,21 +71,21 @@ overlay.addEventListener("click", () => {
 
 const showResultSearchTask = function () {
   const taskContents = document.querySelectorAll(".task-content");
-
-  Array.from(taskContents).forEach((taskContent) => {
-    let regexp = new RegExp(`${inputSearchTask.value}`, "gi");
-    if (taskContent.textContent.match(regexp)) {
-      taskContent.innerHTML = taskContent.innerText.replace(
-        taskContent.textContent.match(regexp),
-        `<span class = "text-find">${taskContent.textContent.match(
-          regexp
-        )}</span>`
-      );
+  if (inputSearchTask.value === "") {
+    Array.from(taskContents).forEach((taskContent) => {
       taskContent.parentElement.style.display = "flex";
-    } else {
-      taskContent.parentElement.style.display = "none";
-    }
-  });
+    });
+  } else {
+    console.log(taskContents);
+    Array.from(taskContents).forEach((taskContent) => {
+      let regexp = new RegExp(`${inputSearchTask.value}`, "gi");
+      if (taskContent.textContent.match(regexp)) {
+        taskContent.parentElement.style.display = "flex";
+      } else {
+        taskContent.parentElement.style.display = "none";
+      }
+    });
+  }
 };
 const searchTask = function () {
   showResultSearchTask();

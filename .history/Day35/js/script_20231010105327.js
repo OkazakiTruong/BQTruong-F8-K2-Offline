@@ -71,7 +71,11 @@ overlay.addEventListener("click", () => {
 
 const showResultSearchTask = function () {
   const taskContents = document.querySelectorAll(".task-content");
-
+  // if (inputSearchTask.value === "") {
+  //   Array.from(taskContents).forEach((taskContent) => {
+  //     taskContent.parentElement.style.display = "flex";
+  //   });
+  // } else {
   Array.from(taskContents).forEach((taskContent) => {
     let regexp = new RegExp(`${inputSearchTask.value}`, "gi");
     if (taskContent.textContent.match(regexp)) {
@@ -86,6 +90,7 @@ const showResultSearchTask = function () {
       taskContent.parentElement.style.display = "none";
     }
   });
+  // }
 };
 const searchTask = function () {
   showResultSearchTask();
