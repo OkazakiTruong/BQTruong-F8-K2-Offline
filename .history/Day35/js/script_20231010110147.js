@@ -73,9 +73,9 @@ const showResultSearchTask = function () {
   const taskContents = document.querySelectorAll(".task-content");
 
   Array.from(taskContents).forEach((taskContent) => {
-    let regexp = new RegExp(`${inputSearchTask.value}`, "i");
+    let regexp = new RegExp(`${inputSearchTask.value}`, "gi");
     if (taskContent.textContent.match(regexp)) {
-      taskContent.innerHTML = taskContent.innerText.replace(
+      taskContent.innerHTML = taskContent.innerText.replaceAll(
         taskContent.textContent.match(regexp),
         `<span class = "text-find">${taskContent.textContent.match(
           regexp
