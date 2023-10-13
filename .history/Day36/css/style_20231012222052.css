@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to bottom, #940b92, #da0c81);
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+img {
+  width: 100%;
+}
+.container {
+  max-width: 900px;
+  height: 100px;
+  margin: 80px auto 0px;
+}
+.item-new {
+  width: 100%;
+  min-height: 100px;
+  background: white;
+  border-radius: 20px;
+}
+.item-new .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.item-new .header .avatar img {
+  border-radius: 50%;
+}
+.item-new .header .avatar {
+  position: relative;
+  width: fit-content;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.item-new .header .avatar::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(2, 231, 182);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  bottom: 0;
+  right: 0;
+}
+
+.item-new div:has(div .author-name) {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.item-new .author-name {
+  font-weight: 500;
+}
+
+.item-new .author-name + .time {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #777777;
+}
+
+.item-new .more {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+.item-new .title {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+.item-new .content .img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.item-new .content div:has(.likes-count) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.item-new .content div:has(.likes-count)::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #777777;
+}
+.item-new .content .likes-count + div {
+  display: flex;
+  column-gap: 10px;
+  padding: 10px;
+  position: relative;
+  bottom: ;
+  :0 ;
+  left: 50%;
+}
