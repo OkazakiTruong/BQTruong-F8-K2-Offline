@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(74, 250, 118),
+    rgb(82, 82, 245),
+    rgb(74, 74, 250)
+  );
+  min-height: 100vh;
+}

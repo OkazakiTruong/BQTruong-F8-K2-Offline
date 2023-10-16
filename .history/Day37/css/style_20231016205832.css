@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+}
+/* start screen */
+.start-screen {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  /* background-color: white; */
+  padding: 80px 140px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  border: 2px dotted aquamarine;
+  border-radius: 20px;
+}
+.start-screen h2 {
+  font-size: 40px;
+}
+.start-screen .btn-start {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 20px;
+  transform: skewX(-10deg);
+  background-color: aquamarine;
+  border: none;
+  box-shadow: 6px 6px 0px 0px rgba(127, 255, 212, 0.699);
+  cursor: pointer;
+  color: green;
+  transition: 0.2s linear;
+}
+
+.start-screen .btn-start:hover {
+  color: orange;
+  box-shadow: 8px 8px 0px 0px orange, 14px 14px 0px 0px rgb(202, 132, 1);
+}
+
+/* loading screen */
+.loading-game {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loading-game p {
+  font-size: 80px;
+}
+/* game screen */
+.score-screen {
+  width: 90vw;
+  /* color: white; */
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 90px;
+  background-color: white;
+}
+.score-screen div:has(.number-question) {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.score-screen .number-question {
+  font-size: 20px;
+  width: fit-content;
+  position: relative;
+  padding-right: 10px;
+}
+.score-screen .number-question::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  border-radius: 99px;
+  background-color: rgb(97, 97, 97);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.score-screen .steak {
+  width: 200px;
+  padding: 4px;
+  border: solid 1px orange;
+  border-radius: 99px;
+  position: relative;
+  /* background-color: aquamarine; */
+}
+.score-screen .steak::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 60%;
+  top: 50%;
+  left: calc(100% / 3);
+  transform: translate(calc(-100% / 3), -50%);
+  background-color: rgb(110, 110, 110);
+}
+.score-screen .steak::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 60%;
+  top: 50%;
+  left: calc((100% / 3) * 2);
+  transform: translate(calc((-100% / 3) * 2), -50%);
+  background-color: rgb(110, 110, 110);
+}
+.score-screen .steak .steak-init {
+  width: calc((100% / 3) * 3);
+  border-radius: 99px;
+  padding: 10px;
+  color: white;
+  background-color: orange;
+}

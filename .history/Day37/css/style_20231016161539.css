@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(153, 44, 255),
+    rgb(120, 62, 255)
+  );
+  min-height: 100vh;
+}

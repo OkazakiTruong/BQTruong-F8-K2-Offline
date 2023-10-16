@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+}
+/* start screen */
+.start-screen {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  /* background-color: white; */
+  padding: 80px 140px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  border: 2px dotted aquamarine;
+  border-radius: 20px;
+}
+.start-screen h2 {
+  font-size: 40px;
+}
+.start-screen .btn-start {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 20px;
+  transform: skewX(-10deg);
+  background-color: aquamarine;
+  border: none;
+  box-shadow: 6px 6px 0px 0px rgba(127, 255, 212, 0.699);
+  cursor: pointer;
+  color: green;
+  transition: 0.2s linear;
+}
+
+.start-screen .btn-start:hover {
+  color: orange;
+  box-shadow: 8px 8px 0px 0px orange, 14px 14px 0px 0px rgb(202, 132, 1);
+}
+
+/* loading screen */
+.loading-game {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loading-game p {
+  font-size: 80px;
+}
+/* game screen */
+.score-screen {
+  width: 90vw;
+  /* color: white; */
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 90px;
+  background-color: white;
+}
+.score-screen .number-question {
+  font-size: 20px;
+  width: fit-content;
+  position: relative;
+}
+.score-screen .number-question::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  color: black;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+}

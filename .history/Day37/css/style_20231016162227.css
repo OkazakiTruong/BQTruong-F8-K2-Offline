@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to .right,
+    cadetblue,
+    rgb(145, 251, 255),
+    cadetblue
+  );
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn-start {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 99px;
+  border: none;
+  background-color: cadetblue;
+  color: white;
+}
