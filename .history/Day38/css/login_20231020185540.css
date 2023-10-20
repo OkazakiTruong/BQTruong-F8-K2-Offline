@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+.container {
+  width: 800px;
+  margin: 70px auto;
+}
+.container h1 {
+  margin-bottom: 10px;
+}

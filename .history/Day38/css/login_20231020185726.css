@@ -1,0 +1,7 @@
+.container {
+  width: 800px;
+  margin: 70px auto;
+}
+.container h1 {
+  margin-bottom: 10px;
+}

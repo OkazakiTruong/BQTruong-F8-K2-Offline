@@ -1,0 +1,10 @@
+.container {
+  width: 800px;
+  margin: 70px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+.container h1 {
+  margin-bottom: 10px;
+}

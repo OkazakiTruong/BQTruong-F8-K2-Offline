@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.blogs {
+  max-width: 900px;
+  margin: 10px auto;
+}
+.blog-item {
+  width: 900px;
+}

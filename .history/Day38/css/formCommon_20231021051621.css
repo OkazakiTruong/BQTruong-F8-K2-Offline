@@ -1,0 +1,74 @@
+.center-form-container-fixed {
+  width: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-form-container-fixed h1 {
+  margin-bottom: 20px;
+}
+.center-form-container-fixed .form {
+  width: 60%;
+}
+.center-form-container-fixed .form .input-field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-bottom: 16px;
+}
+.center-form-container-fixed .form .input-field label {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+.center-form-container-fixed .form .input-field label span {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #4e4e4e;
+  transition: 0.2s;
+}
+.center-form-container-fixed .form .input-field input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid rgb(255, 99, 79);
+}
+.center-form-container-fixed .form .input-field .input-err {
+  color: orangered;
+  margin: 10px;
+}
+.center-form-container-fixed .form .input-field input:valid ~ span,
+.center-form-container-fixed .form .input-field input:focus ~ span {
+  font-size: 12px;
+  top: 0;
+}
+.center-form-container-fixed .btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-form-container-fixed .form .btn {
+  width: 200px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 99px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: rgb(255, 99, 79);
+}
+.center-form-container-fixed .form .btn img {
+  width: 26px;
+  height: 26px;
+}

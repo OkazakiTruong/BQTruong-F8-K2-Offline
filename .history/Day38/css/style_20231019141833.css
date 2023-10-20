@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+img {
+  width: 100%;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    purple,
+    rgb(194, 38, 194),
+    purple
+  );
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.blogs {
+  width: 900px;
+  padding: 0px 15px;
+  margin: 10px auto;
+}
+.blog-item {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.blog-item .blog-header .blog-left {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.blog-item .blog-author-img img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.blog-item .blog-author {
+  font-size: 16px;
+  font-weight: 600;
+}
