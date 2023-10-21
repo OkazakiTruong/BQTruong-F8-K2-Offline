@@ -7,7 +7,8 @@ const query = {
   page: 1,
 };
 
-const loading = (flag, btnPost) => {
+const loading = await (flag) => {
+  const btnPost =  document.querySelector(".btn-post-blog");
   if (flag) {
     btnPost.innerHTML = `<img src="./img/Rolling-1s-200px.gif" alt="">`;
     btnPost.disabled = true;
@@ -30,13 +31,12 @@ const refreshToken = async (tokens) => {
     return false;
   }
 };
-const handlePost = async (data, btnPost) => {
+const handlePost = async (data) => {
   const tokens = localStorage.getItem("login_token");
   if (tokens) {
     let { accessToken } = JSON.parse(tokens);
     client.setToken(accessToken);
     const { response } = await client.post("/blogs", data);
-    loading(true, btnPost);
     if (response.status === 401) {
       if (await refreshToken(tokens)) {
         const { response } = await client.post("/blogs", data);
@@ -44,20 +44,16 @@ const handlePost = async (data, btnPost) => {
         isAddNew = true;
         query.page = 1;
         getPost(query);
-        alert("Thêm mới thành công");
       } else {
         renderLoginCase();
         localStorage.removeItem("login_token");
-        alert("Phiên đăng nhập hết hạn");
       }
     } else {
       isAddNew = true;
       query.page = 1;
       getPost(query);
-      alert("Thêm mới thành công");
     }
   }
-  loading(false, btnPost);
 };
 
 const handleLogout = async () => {
@@ -87,7 +83,7 @@ const formPost = async () => {
     let { accessToken } = JSON.parse(tokens);
     client.setToken(accessToken);
     const { data: profile, response } = await client.get("/users/profile");
-
+    await loading(true);
     if (response.status === 401) {
       if (await refreshToken(tokens)) {
         await client.post("/users/profile");
@@ -99,6 +95,7 @@ const formPost = async () => {
     } else {
       renderFormPost(profile.data);
     }
+    await loading(false);
   }
 };
 const renderFormPost = (data) => {
@@ -135,10 +132,9 @@ const renderFormPost = (data) => {
   const title = document.querySelector(".header .input-title");
   const content = document.querySelector(".header .input-content");
   const formBlogPost = document.querySelector(".form-blog-post");
-  const btnPost = document.querySelector(".btn-post-blog");
   formBlogPost.addEventListener("submit", (e) => {
     e.preventDefault();
-    handlePost({ title: title.value, content: content.value }, btnPost);
+    handlePost({ title: title.value, content: content.value });
   });
   const btnLogout = document.querySelector(".btn-logout");
   btnLogout.addEventListener("click", handleLogout);

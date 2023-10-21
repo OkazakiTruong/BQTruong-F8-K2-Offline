@@ -36,28 +36,26 @@ const handlePost = async (data, btnPost) => {
     let { accessToken } = JSON.parse(tokens);
     client.setToken(accessToken);
     const { response } = await client.post("/blogs", data);
-    loading(true, btnPost);
+
     if (response.status === 401) {
+      loading(true, btnPost);
       if (await refreshToken(tokens)) {
         const { response } = await client.post("/blogs", data);
         console.log(response);
         isAddNew = true;
         query.page = 1;
         getPost(query);
-        alert("Thêm mới thành công");
       } else {
         renderLoginCase();
         localStorage.removeItem("login_token");
-        alert("Phiên đăng nhập hết hạn");
       }
     } else {
       isAddNew = true;
       query.page = 1;
       getPost(query);
-      alert("Thêm mới thành công");
     }
+    loading(false, btnPost);
   }
-  loading(false, btnPost);
 };
 
 const handleLogout = async () => {
