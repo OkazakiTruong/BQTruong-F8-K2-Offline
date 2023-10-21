@@ -12,11 +12,9 @@ const refreshToken = async (tokens) => {
   let { data, response } = await requestRefresh(refreshToken);
   if (response.status === 200) {
     localStorage.setItem("login_token", JSON.stringify(data.data.token));
-    const tokens = localStorage.getItem("login_token");
-    let { accessToken } = JSON.parse(tokens);
-    client.setToken(accessToken);
     return true;
   } else {
+    console.log("false");
     return false;
   }
 };
@@ -28,18 +26,13 @@ const handlePost = async (data) => {
     const { response } = await client.post("/blogs", data);
     if (response.status === 401) {
       if (await refreshToken(tokens)) {
-        const { response } = await client.post("/blogs", data);
-        console.log(response);
-        isAddNew = true;
-        query.page = 1;
+        await client.post("/blogs", data);
         getPost(query);
       } else {
         renderLoginCase();
         localStorage.removeItem("login_token");
       }
     } else {
-      isAddNew = true;
-      query.page = 1;
       getPost(query);
     }
   }
@@ -211,7 +204,6 @@ document.addEventListener("scroll", async (e) => {
       window.innerHeight + window.scrollY >=
       document.body.offsetHeight * 0.7
     ) {
-      isAddNew = false;
       flagDataLoaded = false;
       query.page = query.page + 1;
       console.log(query);
