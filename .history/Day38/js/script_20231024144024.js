@@ -217,21 +217,17 @@ const isLogin = async () => {
 isLogin();
 
 function getTimeAgo(dateCreatedAgo) {
-  let day = Math.floor(dateCreatedAgo / 864e5),
-    hours = Math.floor((dateCreatedAgo % 864e5) / 36e5),
+  let hours = Math.floor(dateCreatedAgo / 36e5),
     minutes = Math.floor((dateCreatedAgo % 36e5) / 60000),
     seconds = Math.floor((dateCreatedAgo % 60000) / 1000);
-  if (day > 0) {
-    return `${day} ngày trước`;
-  }
   if (hours > 0) {
-    return `${hours} giờ trước`;
+    return `${hours} trước`;
   }
   if (minutes > 0) {
-    return `${minutes} phút trước`;
+    return `${minutes} trước`;
   }
-  if (seconds > 0) {
-    return `${seconds} giây trước`;
+  if (hours > 0) {
+    return `${seconds} trước`;
   }
   return `Vừa đăng`;
 }
@@ -260,7 +256,7 @@ function renderBlogs(blogs) {
         </div>
         <div>
           <div class="blog-author">${blog.userId.name}</div>
-          <div class="time-post">${getTimeAgo(dateCreatedAgo)}</div>
+          <div class="time-post">${lapse.getHours()} trước</div>
         </div>
       </div>
       <div class="blog-right">

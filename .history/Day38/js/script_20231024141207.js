@@ -216,26 +216,6 @@ const isLogin = async () => {
 };
 isLogin();
 
-function getTimeAgo(dateCreatedAgo) {
-  let day = Math.floor(dateCreatedAgo / 864e5),
-    hours = Math.floor((dateCreatedAgo % 864e5) / 36e5),
-    minutes = Math.floor((dateCreatedAgo % 36e5) / 60000),
-    seconds = Math.floor((dateCreatedAgo % 60000) / 1000);
-  if (day > 0) {
-    return `${day} ngày trước`;
-  }
-  if (hours > 0) {
-    return `${hours} giờ trước`;
-  }
-  if (minutes > 0) {
-    return `${minutes} phút trước`;
-  }
-  if (seconds > 0) {
-    return `${seconds} giây trước`;
-  }
-  return `Vừa đăng`;
-}
-
 let flagDataLoaded = false;
 function renderBlogs(blogs) {
   const blogsEl = document.querySelector(".blogs");
@@ -246,10 +226,10 @@ function renderBlogs(blogs) {
   if (blogs) {
     html += blogs
       .map((blog) => {
-        console.log(blog.createdAt);
         const dateCreatedAgo =
           Date.parse(new Date()) - Date.parse(new Date(blog.createdAt));
-
+        const lapse = new Date().getTimezoneOffset(dateCreatedAgo);
+        console.log(lapse);
         const dayCreated = new Date(blog.createdAt).getDay();
         return `
     <div class="blog-item">
@@ -260,7 +240,7 @@ function renderBlogs(blogs) {
         </div>
         <div>
           <div class="blog-author">${blog.userId.name}</div>
-          <div class="time-post">${getTimeAgo(dateCreatedAgo)}</div>
+          <div class="time-post">10 phút trước</div>
         </div>
       </div>
       <div class="blog-right">

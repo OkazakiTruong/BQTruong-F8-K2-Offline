@@ -216,24 +216,22 @@ const isLogin = async () => {
 };
 isLogin();
 
-function getTimeAgo(dateCreatedAgo) {
-  let day = Math.floor(dateCreatedAgo / 864e5),
-    hours = Math.floor((dateCreatedAgo % 864e5) / 36e5),
-    minutes = Math.floor((dateCreatedAgo % 36e5) / 60000),
-    seconds = Math.floor((dateCreatedAgo % 60000) / 1000);
-  if (day > 0) {
-    return `${day} ngày trước`;
+function getTimeAgo(lapse) {
+  if (lapse.getMonth() > 0) {
+    return `${lapse.getMonth()} tháng`;
   }
-  if (hours > 0) {
-    return `${hours} giờ trước`;
+  if (lapse.getDate() > 0) {
+    return `${lapse.getDay()} ngày`;
   }
-  if (minutes > 0) {
-    return `${minutes} phút trước`;
+  if (lapse.getHours() > 0) {
+    return `${lapse.getHours()} giờ`;
   }
-  if (seconds > 0) {
-    return `${seconds} giây trước`;
+  if (lapse.getMinutes() > 0) {
+    return `${lapse.getMinutes()} phút`;
   }
-  return `Vừa đăng`;
+  if (lapse.setSeconds() > 0) {
+    return `${lapse.setSeconds()} giây`;
+  }
 }
 
 let flagDataLoaded = false;
@@ -246,10 +244,11 @@ function renderBlogs(blogs) {
   if (blogs) {
     html += blogs
       .map((blog) => {
-        console.log(blog.createdAt);
         const dateCreatedAgo =
           Date.parse(new Date()) - Date.parse(new Date(blog.createdAt));
-
+        const lapse = new Date(
+          dateCreatedAgo + new Date().getTimezoneOffset() * 100
+        );
         const dayCreated = new Date(blog.createdAt).getDay();
         return `
     <div class="blog-item">
@@ -260,7 +259,7 @@ function renderBlogs(blogs) {
         </div>
         <div>
           <div class="blog-author">${blog.userId.name}</div>
-          <div class="time-post">${getTimeAgo(dateCreatedAgo)}</div>
+          <div class="time-post">${getTimeAgo(lapse)} trước</div>
         </div>
       </div>
       <div class="blog-right">
