@@ -1,0 +1,35 @@
+.custom-datetime {
+  background-color: white;
+  border-radius: 10px;
+  width: 340px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.custom-datetime .datetime-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.custom-datetime .weeks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.custom-datetime .weeks li {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.custom-datetime .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 10px;
+}
+.custom-datetime .days li {
+  display: flex;
+  justify-content: center;
+}

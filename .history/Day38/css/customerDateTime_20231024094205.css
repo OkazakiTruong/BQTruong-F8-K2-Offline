@@ -1,0 +1,18 @@
+.custom-datetime {
+  /* background-color: white; */
+  width: 340px;
+  padding: 14px;
+}
+.custom-datetime .datetime-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.custom-datetime .weeks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.custom-datetime .weeks li {
+  display: flex;
+  justify-content: center;
+}

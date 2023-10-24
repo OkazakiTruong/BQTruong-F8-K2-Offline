@@ -1,0 +1,60 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 5;
+  opacity: 0.5;
+}
+.custom-datetime .btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(26px, -26px);
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+}
+.custom-datetime {
+  background-color: white;
+  border-radius: 10px;
+  width: 340px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.custom-datetime .datetime-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.custom-datetime .datetime-header .time {
+  font-size: 20px;
+  font-weight: 600;
+}
+.custom-datetime .weeks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: 600;
+}
+.custom-datetime .weeks li {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.custom-datetime .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 16px;
+}
+.custom-datetime .days li {
+  display: flex;
+  justify-content: center;
+}

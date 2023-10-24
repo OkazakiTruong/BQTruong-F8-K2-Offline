@@ -1,0 +1,32 @@
+.custom-datetime {
+  background-color: white;
+  border-radius: 10px;
+  width: 340px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+}
+.custom-datetime .datetime-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.custom-datetime .weeks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.custom-datetime .weeks li {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.custom-datetime .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 10px;
+}
+.custom-datetime .days li {
+  display: flex;
+  justify-content: center;
+}

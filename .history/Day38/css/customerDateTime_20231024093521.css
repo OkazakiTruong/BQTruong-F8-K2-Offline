@@ -1,0 +1,7 @@
+.custom-datetime {
+  /* background-color: white; */
+}
+.custom-datetime .datetime-header {
+  display: flex;
+  justify-content: space-between;
+}
