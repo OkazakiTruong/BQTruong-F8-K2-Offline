@@ -73,8 +73,7 @@ export const dateTime = (inputTimeEl) => {
             ? `0${item.innerText}`
             : `${item.innerText}`
         }/${chooseMonth}/${chooseYear}`;
-        removeActive(liTags);
-        item.classList.add("active");
+        item.classList.classList.add("active");
       });
     });
   };

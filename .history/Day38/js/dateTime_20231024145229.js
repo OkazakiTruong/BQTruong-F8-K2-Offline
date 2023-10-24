@@ -35,11 +35,6 @@ export const dateTime = (inputTimeEl) => {
     "Tháng 12",
   ];
 
-  function removeActive(liTags) {
-    liTags.forEach((li) => {
-      li.classList.remove("active");
-    });
-  }
   const renderCalender = () => {
     let lastDateOfMonth = new Date(getYear, getMonth + 1, 0).getDate();
     let firstDayOfMonth = new Date(getYear, getMonth, 1).getDay();
@@ -73,8 +68,7 @@ export const dateTime = (inputTimeEl) => {
             ? `0${item.innerText}`
             : `${item.innerText}`
         }/${chooseMonth}/${chooseYear}`;
-        removeActive(liTags);
-        item.classList.add("active");
+        item.classList.classList.add("active");
       });
     });
   };

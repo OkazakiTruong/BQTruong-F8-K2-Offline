@@ -36,9 +36,7 @@ export const dateTime = (inputTimeEl) => {
   ];
 
   function removeActive(liTags) {
-    liTags.forEach((li) => {
-      li.classList.remove("active");
-    });
+    liTags.forEach((li) => {});
   }
   const renderCalender = () => {
     let lastDateOfMonth = new Date(getYear, getMonth + 1, 0).getDate();
@@ -73,8 +71,7 @@ export const dateTime = (inputTimeEl) => {
             ? `0${item.innerText}`
             : `${item.innerText}`
         }/${chooseMonth}/${chooseYear}`;
-        removeActive(liTags);
-        item.classList.add("active");
+        item.classList.classList.add("active");
       });
     });
   };

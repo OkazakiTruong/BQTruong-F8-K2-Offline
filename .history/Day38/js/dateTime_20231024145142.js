@@ -35,11 +35,6 @@ export const dateTime = (inputTimeEl) => {
     "Tháng 12",
   ];
 
-  function removeActive(liTags) {
-    liTags.forEach((li) => {
-      li.classList.remove("active");
-    });
-  }
   const renderCalender = () => {
     let lastDateOfMonth = new Date(getYear, getMonth + 1, 0).getDate();
     let firstDayOfMonth = new Date(getYear, getMonth, 1).getDay();
@@ -67,14 +62,13 @@ export const dateTime = (inputTimeEl) => {
     const liTags = daysEl.querySelectorAll("li:not(.in-active)");
     console.log(liTags);
     liTags.forEach((item) => {
+      item.classList.remove("active");
       item.addEventListener("click", function () {
         inputTimeEl.value = `${
           Number(item.innerText) < 10
             ? `0${item.innerText}`
             : `${item.innerText}`
         }/${chooseMonth}/${chooseYear}`;
-        removeActive(liTags);
-        item.classList.add("active");
       });
     });
   };
