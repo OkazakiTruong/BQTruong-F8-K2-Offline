@@ -236,7 +236,7 @@ function getTimeAgo(dateCreatedAgo) {
 }
 
 let flagDataLoaded = false;
-const renderBlogs = (blogs) => {
+function renderBlogs(blogs) {
   const blogsEl = document.querySelector(".blogs");
   let html = "";
   if (!isAddNew) {
@@ -247,8 +247,8 @@ const renderBlogs = (blogs) => {
       .map((blog) => {
         const dateCreatedAgo =
           Date.parse(new Date()) - Date.parse(new Date(blog.createdAt));
+
         const dayCreated = new Date(blog.createdAt).getDay();
-        blog.content = renderLink(blog.content);
         return `
     <div class="blog-item">
     <div class="blog-header">
@@ -282,30 +282,28 @@ const renderBlogs = (blogs) => {
       })
       .join("");
     blogsEl.innerHTML = html;
+    const contents = document.querySelectorAll(".content:not(.done)");
+    renderLink(contents);
   }
-};
-const renderLink = (content) => {
-  const regex =
-    /((?<url>((?:http|https)?:\/\/[-_\w\.]*[-_\w\.]+\.([a-z]{2,})(?::\d{2,})?(\/?|\/[\w\-\/?=&+#\.]))(([_\w\?\=\.\-\&\%\/]+))?)|((?<phoneNumber>)(0|\+84)\d{1,9})|((?<email>)([a-z0-9]+)@([a-z]+.)([a-z]{2,})))/gim;
-  const results = content.match(regex);
-  if (results) {
-    Array.from(results).forEach((result) => {
-      if (result.match(/youtube/)) {
-        let resultClone = result;
-        result = result.replace("watch?v=", "embed/");
-        content = content.replace(
-          resultClone,
-          `<iframe height="315" width="560" src="${result}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-        );
-      } else {
-        content = content.replace(
+}
+const renderLink = (contents) => {
+  Array.from(contents).forEach((content) => {
+    const regex =
+      /((?<url>((?:http|https)?:\/\/[-_\w\.]*[-_\w\.]+\.([a-z]{2,})(?::\d{2,})?(\/?|\/[\w\-\/?=&+#\.]))(([_\w\?\=\.\-\&\%\/]+))?)|((?<phoneNumber>)(0|\+84)\d{1,9})|((?<email>)([a-z0-9]+)@([a-z]+.)([a-z]{2,})))/gim;
+    const results = content.innerText.match(regex);
+    if (results) {
+      results.forEach((result) => {
+        if (result.match(/youtube/)) {
+          result = result.replace(`watch?v=`);
+        }
+        content.innerHTML = content.innerHTML.replace(
           result,
-          `<a href="${result}" target="_blank">${result}</a>`
+          `<a href="${result}">${result}</a>`
         );
-      }
-    });
-  }
-  return content;
+      });
+      content.classList.add("done");
+    }
+  });
 };
 const getPost = async (query) => {
   const queryString = new URLSearchParams(query).toString();

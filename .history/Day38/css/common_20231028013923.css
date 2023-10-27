@@ -5,10 +5,7 @@
   outline: none;
   border: none;
 }
-/* .content:not(.done) {
-  color: red;
-} */
-.done {
+.content:not(.done) {
   color: red;
 }
 img {

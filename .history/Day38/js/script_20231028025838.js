@@ -295,13 +295,10 @@ const renderLink = (content) => {
         result = result.replace("watch?v=", "embed/");
         content = content.replace(
           resultClone,
-          `<iframe height="315" width="560" src="${result}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+          `<iframe height="315" width="560" src="${result}"></iframe>`
         );
       } else {
-        content = content.replace(
-          result,
-          `<a href="${result}" target="_blank">${result}</a>`
-        );
+        content = content.replace(result, `<a href="${result}">${result}</a>`);
       }
     });
   }

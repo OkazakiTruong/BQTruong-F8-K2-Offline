@@ -8,9 +8,6 @@
 /* .content:not(.done) {
   color: red;
 } */
-.done {
-  color: red;
-}
 img {
   width: 100%;
 }
