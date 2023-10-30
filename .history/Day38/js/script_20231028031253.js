@@ -293,7 +293,6 @@ const renderLink = (content) => {
       if (result.match(/youtube/)) {
         let resultClone = result;
         result = result.replace("watch?v=", "embed/");
-        console.log(result);
         content = content.replace(
           resultClone,
           `<iframe width="560" height="315" src="${result}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
