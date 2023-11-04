@@ -1,0 +1,24 @@
+$background-color: #334155;
+$primary-color: #14b8a6;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+input {
+  border: none;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.todo-app {
+  background-color: aquamarine;
+  width: 90%;
+  padding: 20px;
+}
