@@ -1,0 +1,10 @@
+import React from "react";
+
+export default function Loading() {
+  return (
+    <div className="loading">
+      <div>Loading...</div>
+      <div className="overlay"></div>
+    </div>
+  );
+}
