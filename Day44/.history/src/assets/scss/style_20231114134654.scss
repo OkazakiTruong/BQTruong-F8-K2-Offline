@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 10px;
+  margin: 60px auto;
+  background-color: orangered;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 40px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.layout {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  z-index: 90;
+  opacity: 50%;
+}
+.loading {
+  font-size: 30px;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+img {
+  width: 100%;
+  border-radius: 50%;
+}
+.img {
+  width: 100px;
+  height: 100px;
+}
+.form-mail {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}

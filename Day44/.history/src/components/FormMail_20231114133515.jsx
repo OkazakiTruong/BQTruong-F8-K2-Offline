@@ -1,0 +1,44 @@
+import React from "react";
+import emailjs from "@emailjs/browser";
+
+export default function FormMail() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_bkmi1ox",
+        "template_l2ty0ob",
+        e.target,
+        "Xr5h3v9aPlpzM-OB9"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const { logout, user } = useAuth0();
+
+  return (
+    <div>
+      <img src={user.picture} alt="" />
+      <h2>Xin chào {user.name}</h2>
+      <form onSubmit={handleSubmit}>
+        FormMail
+        <input type="email" name="email" placeholder="Enter your email" />
+        <textarea
+          name="message"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your message"
+        ></textarea>
+        <button>Tôi cần hỗ trợ bài tập</button>
+      </form>
+    </div>
+  );
+}
