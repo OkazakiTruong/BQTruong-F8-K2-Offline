@@ -1,0 +1,23 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+.home-wrapper {
+  .todo-column {
+    width: 360px;
+    background-color: cadetblue;
+    padding: 10px;
+    .column-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    .column-name {
+      background-color: transparent;
+      font-size: 24px;
+      &:focus {
+        background-color: white;
+      }
+    }
+    .column-delete-btn {
+      background-color: transparent;
+      border: none;
+    }
+  }
+}

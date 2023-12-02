@@ -1,0 +1,67 @@
+import React, { useState } from "react";
+import "./home.scss";
+import Column from "./Column";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { columnSelector } from "../../stores/selector";
+import { DragDropContext } from "react-beautiful-dnd";
+import { Draggable, Droppable } from "react-beautiful-dnd";
+
+export default function Home() {
+  const [listColumn, setListColumn] = useState([]);
+  const columns = useSelector(columnSelector);
+
+  useEffect(() => {
+    setListColumn(columns);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "columns",
+      JSON.stringify(
+        listColumn.map((column) => {
+          return {
+            column: column.column,
+            columnName: column.columnName,
+          };
+        })
+      )
+    );
+  }, [listColumn]);
+
+  const handleAddNewColumn = () => {
+    const columnNumber = Math.floor(Math.random() * 10000);
+    const columnName = "column" + listColumn.length;
+    localStorage.setItem(
+      "columns",
+      JSON.stringify([
+        ...listColumn,
+        { column: columnNumber, columnName: columnName },
+      ])
+    );
+    const columnsLocal = JSON.parse(localStorage.getItem("columns"));
+    setListColumn(columnsLocal);
+  };
+  return (
+    <div className="home-wrapper">
+      <DragDropContext
+        onDragEnd={() => {
+          console.log("drag end");
+        }}
+      >
+        <Droppable droppableId="ROOT" type="group">
+          {(provided) => (
+            <div {...provided.droppableProps} ref={provided.innerRef}>
+              {listColumn.map((column, index) => {
+                return <Column data={column} key={column.column} />;
+              })}
+            </div>
+          )}
+        </Droppable>
+        <button className="btnAdd" onClick={handleAddNewColumn}>
+          Add new column
+        </button>
+      </DragDropContext>
+    </div>
+  );
+}

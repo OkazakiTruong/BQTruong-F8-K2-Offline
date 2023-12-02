@@ -1,0 +1,22 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { client } from "../../utils/clientUtils";
+
+export const loginSlice = createSlice({
+  name: "login",
+  initialState: {
+    status: "idle",
+    isLogin: false,
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getApiKey.pending, (state, action) => {
+        state.status = "pending";
+      })
+      .addCase(getApiKey.fulfilled, (state, action));
+  },
+});
+export const getApiKey = createAsyncThunk("login/getApiKey", async (email) => {
+  const { data } = await client.get(`/api-key?email=${email}`);
+  const apiKey = data.data.apiKey;
+  return data;
+});

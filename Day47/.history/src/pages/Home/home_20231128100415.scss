@@ -1,0 +1,13 @@
+.home-wrapper {
+  .todo-column {
+    max-width: 400px;
+    .column-header {
+      display: flex;
+    }
+    .column-name {
+      background-color: red;
+    }
+    .column-delete-btn {
+    }
+  }
+}
