@@ -1,0 +1,12 @@
+@import "../../assets/scss/variables.scss";
+.login-wrapper {
+  .login-main {
+    position: fixed;
+  }
+  .layout {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    opacity: 0.3;
+  }
+}

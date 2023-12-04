@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: $font-barlow;
+}
+input {
+  font-family: $font-barlow;
+  color: $color-black;
+  font-size: 16px;
+}

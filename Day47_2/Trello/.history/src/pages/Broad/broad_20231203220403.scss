@@ -1,0 +1,9 @@
+@import "../../assets/scss/variables.scss";
+.broad-wrapper {
+  padding: 10px;
+  display: flex;
+  background-color: black;
+  .column {
+    background-color: $color-white;
+  }
+}

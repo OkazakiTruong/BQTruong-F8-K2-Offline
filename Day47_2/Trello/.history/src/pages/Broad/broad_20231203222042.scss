@@ -1,0 +1,57 @@
+@import "../../assets/scss/variables.scss";
+.broad-wrapper {
+  padding: 10px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  .column {
+    background-color: $color-white;
+    // padding: 10px;
+    height: 400px;
+    width: 300px;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $main-color;
+      padding: 10px;
+      color: white;
+      button {
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+      }
+    }
+    &-body {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      .task-wrapper {
+        padding: 10px;
+        border: 1px solid $main-color;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:hover button {
+          display: block;
+        }
+        button {
+          background-color: transparent;
+          cursor: pointer;
+          display: none;
+        }
+      }
+    }
+    &-footer {
+      button {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
