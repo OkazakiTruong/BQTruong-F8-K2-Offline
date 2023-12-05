@@ -1,0 +1,83 @@
+.cv-wrapper {
+  width: 1230px;
+  margin: 0 auto;
+  padding: 100px 15px 0px;
+}
+.cv-heading {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+.cv-body {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 40px;
+  font-size: 20px;
+  padding: 0px 40px;
+}
+.cv-body-left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .avatar {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20px;
+    img {
+      width: 90%;
+      border-radius: 10px;
+    }
+    &:hover img {
+      width: 120px;
+    }
+  }
+  .avatar ~ div {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 6px;
+  }
+  .skill-heading,
+  .history-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+.cv-body-right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .contact-heading,
+  .project-heading,
+  .hobby-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .contact-body {
+    li {
+      display: flex;
+    }
+  }
+  .project-item:not(.project-item:last-child) {
+    margin-bottom: 20px;
+  }
+  .project-item {
+    .nav {
+      margin-top: 16px;
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+  .hobby-wrapper {
+    ul {
+      list-style: circle;
+    }
+  }
+}

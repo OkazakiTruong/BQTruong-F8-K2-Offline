@@ -1,0 +1,37 @@
+.header-container {
+  width: 1230px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    .logo {
+      width: 50px;
+      margin-right: 10px;
+      img {
+        border-radius: 10px;
+      }
+    }
+    .name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  .btn-groups {
+    display: flex;
+    column-gap: 10px;
+    button {
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+}
