@@ -1,0 +1,17 @@
+{
+  "HomeHeader": {
+    "title": "Developer 22 tuổi nhưng cột sống ở tuổi 80."
+  },
+  "HomeInfomation": {
+    "skillHeading": "Những kỹ năng của tôi",
+    "skillSubHead1": "Kỹ năng về web",
+    "skillTitle1": "HTML5, CSS3, SCSS, UI/UX, FIGMA, JS, ReactJs, NextJs...",
+    "skillSubHead2": "Những kỹ năng khác",
+    "skillTitle1": "Có khả năng tư duy ở mức khá, Có khả năng tự học và tìm kiếm thông tin, Có khả năng làm việc nhóm",
+    "historyHeading": "Lịch sử",
+    "historySubHead1": "2017-2020",
+    "historyTitle1": "Studied high school level 3 at Quat Lam High School",
+    "historySubHead2": "2020-now",
+    "historyTitle2": "Studied at Hanoi Open University"
+  }
+}

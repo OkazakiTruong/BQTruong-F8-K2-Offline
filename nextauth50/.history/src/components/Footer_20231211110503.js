@@ -1,0 +1,12 @@
+import { useTranslations } from "next-intl";
+export default function Footer() {
+  const t = useTranslations("Footer");
+  return (
+    <div className="mt-[40px]">
+      <h2 className="text-center text-sky-800">
+        Xin chào, Mình là Trưởng. Chào mừng bạn tới với trang cá nhân của mình
+        nhé!
+      </h2>
+    </div>
+  );
+}
