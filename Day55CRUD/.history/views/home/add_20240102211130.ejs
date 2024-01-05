@@ -1,0 +1,22 @@
+<h1>Thêm khóa học</h1>
+<form action="" method="post">
+  <div class="mb-3">
+    <label for="">Tên</label>
+    <input type="text" name="name" class="form-control" placeholder="Tên..." />
+    <span class="text-danger"><%= req.errors.name %></span>
+  </div>
+  <div class="mb-3">
+    <label for="">Trạng thái</label>
+    <select name="status" class="form-select">
+      <option value="all">Tất cả</option>
+      <option value="active">Chưa kích hoạt</option>
+      <option value="inactive">Kích hoạt</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="">Price</label>
+    <input type="text" name="price" class="form-control" placeholder="Giá..." />
+  </div>
+  <button type="submit" class="btn btn-success">Lưu</button>
+  <a href="/" class="btn btn-danger">Hủy</a>
+</form>

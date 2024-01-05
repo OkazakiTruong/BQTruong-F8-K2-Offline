@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+  integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+" />
+<form action="">
+  <div class="row">
+    <div class="col-9">
+      <input
+        type="search"
+        class="form-control"
+        name="keyword"
+        placeholder="Từ khóa tìm kiếm"
+      />
+    </div>
+    <div class="col-3 d-grid">
+      <button class="btn btn-success">Tìm kiếm</button>
+    </div>
+  </div>
+</form>
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Created at</th>
+  </tr>
+  <% for( let index = 0; index < courses.length; index++ ) { %>
+  <tr>
+    <td><%= courses[index].id %></td>
+    <td><%= courses[index].name %></td>
+    <td><%= courses[index].price %></td>
+    <td>
+      <%= moment(courses[index].created_at).format("DD/MM/YYYY HH:mm:ss") %>
+    </td>
+  </tr>
+  <% } %>
+</table>

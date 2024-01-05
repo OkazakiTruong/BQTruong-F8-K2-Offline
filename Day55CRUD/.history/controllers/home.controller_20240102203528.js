@@ -1,0 +1,36 @@
+const courseModel = require("../models/course.model");
+const moment = require("moment");
+const { object, string, number } = require("yup");
+const schema = object({
+  name: string().required("Tên khóa học bắt buộc phải nhập"),
+  price: number().integer("Giá khóa học phải là một số"),
+});
+
+module.exports = {
+  index: async (req, res) => {
+    //read data from table courses
+    try {
+      const { keyword, status } = req.query;
+      const courses = await courseModel.all(keyword, status);
+      const debug = await courseModel.all(keyword, status).describe();
+      console.log(debug);
+
+      res.render("home/index", { courses: courses, moment });
+    } catch (error) {
+      //   throw new Error(error.message);
+    }
+  },
+  add: (req, res) => {
+    res.render("home/add");
+  },
+  handleAdd: async (req, res) => {
+    /*
+    validate:
+    - Tên: Bắt buộc, không bị trùng
+    - Giá: Bắt buộc, số
+    Insert Database
+    Redirect kèm thông báo
+    */
+    res.send("add");
+  },
+};

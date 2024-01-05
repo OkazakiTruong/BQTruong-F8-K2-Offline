@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="stylesheets/style.css" />
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Price</td>
+    <td>Created at</td>
+    <td>Updated at</td>
+  </tr>
+  <% for( let index = 0; index < courses.length; index++ ) { %>
+  <tr>
+    <td><%= courses[index].id %></td>
+    <td><%= courses[index].name %></td>
+    <td><%= courses[index].price %></td>
+    <td><%= courses[index].created_at %></td>
+    <td><%= courses[index].updated_at %></td>
+  </tr>
+  <% } %>
+</table>

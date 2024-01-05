@@ -1,0 +1,101 @@
+<h1>Danh sách khóa học</h1>
+<div class="mb-3">
+  <a href="/add" class="btn btn-success">Thêm mới</a>
+</div>
+<% if (msg.length) { %>
+<div class="alert alert-success" role="alert">Thêm mới thành công!</div>
+<% } %>
+<form action="" class="mb-3">
+  <div class="row">
+    <div class="col-3">
+      <select class="form-select" name="status">
+        <option value="all">Tất cả</option>
+        <option value="active">Kích hoạt</option>
+        <option value="inactive">Chưa kích hoạt</option>
+      </select>
+    </div>
+    <div class="col-6">
+      <input
+        type="search"
+        class="form-control"
+        name="keyword"
+        placeholder="Từ khóa tìm kiếm..."
+      />
+    </div>
+    <div class="col-3 d-grid">
+      <button class="btn btn-success">Tìm kiếm</button>
+    </div>
+  </div>
+</form>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th width="5%">STT</th>
+      <th>Tên</th>
+      <th>Trạng thái</th>
+      <th>Giá</th>
+      <th>Thời gian</th>
+      <th width="5%">Sửa</th>
+      <th width="5%">Xóa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% courses.forEach((course, index) => { %>
+    <tr>
+      <td><%= index+1 %></td>
+      <td><%= course.name %></td>
+      <td><%= course.status ? "Kích hoạt": "Chưa kích hoạt" %></td>
+      <td><%= course.price %></td>
+      <td><%= moment(course.created_at).format('DD/MM/YYYY HH:mm:ss') %></td>
+      <td>
+        <a href="#" class="btn btn-warning">Sửa</a>
+      </td>
+      <td>
+        <a href="#" class="btn btn-danger">Xóa</a>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#exampleModal"
+>
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">Hi</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

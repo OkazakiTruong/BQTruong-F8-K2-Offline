@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="stylesheets/style.css" />
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Created at</th>
+  </tr>
+  <% for( let index = 0; index < courses.length; index++ ) { %>
+  <tr>
+    <td><%= courses[index].id %></td>
+    <td><%= courses[index].name %></td>
+    <td><%= courses[index].price %></td>
+    <td>
+      <%= moment(courses[index].created_at).format("DD/MM/YYYY HH:mm:ss") %>
+    </td>
+    <td>
+      <%= moment(courses[index].updated_at).format("DD/MM/YYYY HH:mm:ss") %>
+    </td>
+  </tr>
+  <% } %>
+</table>
