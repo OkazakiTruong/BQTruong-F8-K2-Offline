@@ -1,0 +1,42 @@
+<div
+  class="col-4 position-absolute top-50 start-50 translate-middle border border-primary rounded p-4"
+>
+  <h1 class="text-primary row justify-content-center mb-4">Đăng nhập</h1>
+  <form action="" method="post" class="row justify-content-center">
+    <div class="mb-3">
+      <label for="" class="form-label">Email của bạn</label>
+      <input type="email" class="form-control" name="email" />
+      <span class="text-danger"><%= req.errors.email %></span>
+      <span class="text-danger"><%= req.errors.emailNotExist %></span>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Password của bạn</label>
+      <input type="password" class="form-control" name="password" />
+      <span class="text-danger"><%= req.errors.password %></span>
+      <span class="text-danger"><%= req.errors.incorrectPassword %></span>
+    </div>
+    <p class="mb-3">
+      Chưa có tài khoản ?
+      <span class="text-primary">
+        <a href="/users/register">Đăng ký ngay!</a>
+      </span>
+    </p>
+    <button type="submit" class="btn btn-primary mt-4 col-10">Đăng nhập</button>
+  </form>
+</div>
+<% if (msg) { %>
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto text-primary">Message</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="toast-body"><%= msg.msg %></div>
+  </div>
+</div>
+<% } %>

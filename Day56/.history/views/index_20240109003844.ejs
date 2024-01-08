@@ -1,0 +1,8 @@
+<h1 class="text-primary">Trang chủ</h1>
+<% if (req.session.user.userEmail) { %>
+<h2 class="text-primary">Xin chào, <%=req.session.user.userEmail%></h2>
+<a href="/logout" class="btn btn-primary">Đăng xuất</a>
+<% } else { %>
+<h2 class="text-primary">Đăng nhập / Đăng ký để sử dụng dịch vụ</h2>
+<a class="btn btn-primary" href="/users/login">Đăng nhập/Đăng ký</a>
+<%}%>
